@@ -1,6 +1,66 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Saira Condensed";
+  src: url("/font/SairaCondensed-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 html, body {
   background-color: black;
-  color: white;
+  color: #f6f5ef;
+  font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
 }
