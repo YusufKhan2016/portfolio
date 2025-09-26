@@ -14,7 +14,7 @@
 
       <!-- hero intro section   -->
       <div
-      class="flex justify-center gap-10 text-amber-50 bg-black/45 backdrop-blur-3xl uppercase mx-auto px-27 rounded-t-4xl overflow-hidden py-10 relative"
+      class="flex justify-center gap-10 border-t-1 border-solid border-t-amber-50 text-amber-50 bg-black uppercase mx-auto px-27 rounded-t-4xl overflow-hidden py-10 relative"
       ref="selfIntro">
         <div class="flex flex-col justify-between">
           <h1 class="text-8xl">Brand & Website Designer</h1>
@@ -26,10 +26,10 @@
               <li class="uppercase flex">Linkedin <ArrowRight class="-rotate-45"/></li>
             </div>
 
-            <div class="bg-white border-3 rounded-full h-4 w-16"></div>
+            <div class="bg-white rounded-full h-2 w-14"></div>
 
             <div>
-              <p class="text-4xl">Let's Talk</p>
+              <p class="text-[40px]">Let's Talk</p>
             </div>
           </div>
         </div>
@@ -57,7 +57,6 @@ const selfIntro = ref<HTMLElement | null>(null);
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-
   gsap.from(rafsunName.value, {
       filter: "blur(10px)",
       opacity: 0,
@@ -79,7 +78,7 @@ onMounted(() => {
     end: "430px",
     pin: rafsunName.value,
     pinSpacing: false,
-    scrub: true,
+    scrub: 2,
     toggleActions: "restart none none reverse",
     // markers: true,
     animation: nameAnimation,
