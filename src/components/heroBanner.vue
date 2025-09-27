@@ -7,14 +7,14 @@
       ref="rafsunName">
         <h1
         class="uppercase font-black text-[400px] glow-text scale-x-[0.7] text-transparent bg-cover bg-left bg-clip-text"
-        :style="`background-image: url(https://img.freepik.com/free-photo/minimal-product-backdrop-gray_53876-147756.jpg?semt=ais_hybrid&w=740&q=80)`">
+        :style="{ backgroundImage: `url(${logoBg})` }">
           Rafsun
         </h1>
       </div>
 
       <!-- hero intro section   -->
       <div
-      class="flex justify-center gap-10 border-t-1 border-solid border-t-amber-50 text-amber-50 bg-black uppercase mx-auto px-27 rounded-t-4xl overflow-hidden py-10 relative"
+      class="flex justify-center gap-10 text-amber-50 bg-black uppercase mx-auto px-27 rounded-t-4xl overflow-hidden py-10 relative"
       ref="selfIntro">
         <div class="flex flex-col justify-between">
           <h1 class="text-8xl">Brand & Website Designer</h1>
@@ -50,6 +50,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import rafsunProfile from "@/assets/images/rafsun.jpg";
+import logoBg from "@/assets/images/logo_bg.jpg";
 
 const rafsunName = ref<HTMLElement | null>(null);
 const selfIntro = ref<HTMLElement | null>(null);
@@ -64,21 +65,26 @@ onMounted(() => {
     }
   )
 
-  const nameAnimation = gsap.from(
+  const nameAnimation = gsap.fromTo(
     rafsunName.value,
     {
       y: 30,
-      scale: 1.02,
+      scale: 1.04,
+      ease: "power3.Out"
+    },
+    {
+      scale: 0.98,
+      opacity: 0,
       ease: "power3.inOut"
     }
   );
 
   ScrollTrigger.create({
     start: "top top",
-    end: "430px",
+    end: "400px",
     pin: rafsunName.value,
     pinSpacing: false,
-    scrub: 2,
+    scrub: 1,
     toggleActions: "restart none none reverse",
     // markers: true,
     animation: nameAnimation,
