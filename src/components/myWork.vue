@@ -1,8 +1,12 @@
 <template>
   <section>
-    <hr class="border-1 border-solid border-amber-50" ref="sectionBorder">
+    <hr
+    class="border-1 border-solid border-amber-50"
+    ref="sectionBorder">
+
     <div class="container mx-auto">
       <div class="px-27">
+
         <!-- heading  -->
         <div class="flex items-center justify-between py-7">
           <h2 class="text-[#BBBBBB] w-[400px] text-2xl">
@@ -10,12 +14,14 @@
           </h2>
           <h1 class="flex items-center text-[40px] uppercase">My Work <ArrowRight :size="45" stroke-width="1.4" /> </h1>
         </div>
+
       </div>
     </div>
 
     <div class="overflow-hidden">
       <div class="h-[150vh] scale-[1.2]"
       ref="work">
+
         <div
         v-for="(imageidx, idx) in flexImages"
         :key="idx"
@@ -28,6 +34,7 @@
             <img :src="img" alt="">
           </div>
         </div>
+
       </div>
     </div>
   </section>

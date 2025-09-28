@@ -68,13 +68,13 @@ onMounted(() => {
   const nameAnimation = gsap.fromTo(
     rafsunName.value,
     {
-      y: 30,
+      opacity: 1,
       scale: 1.04,
-      ease: "power3.Out"
+      ease: "power3.inOut"
     },
     {
-      scale: 0.98,
       opacity: 0,
+      scale: 0.98,
       ease: "power3.inOut"
     }
   );
