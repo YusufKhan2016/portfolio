@@ -31,7 +31,7 @@
           :key="childIdx"
           class="flex flex-col rounded-lg overflow-hidden"
           :class="childIdx===1 ? 'translate-y-15' : 'translate-y-0'">
-            <img :src="img" alt="">
+            <img :src="img" class="rounded-lg overflow-hidden" alt="">
           </div>
         </div>
 
