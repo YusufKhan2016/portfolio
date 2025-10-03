@@ -49,7 +49,7 @@ const tl = gsap.timeline({
     start: "top bottom",
     end: "top top",
     scrub: 1,
-    markers: true,
+    // markers: true,
   }
 });
 
