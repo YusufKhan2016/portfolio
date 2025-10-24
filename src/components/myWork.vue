@@ -57,7 +57,9 @@ import work8 from "@/assets/images/myWork/work8.webp";
 
 const sectionBorder = ref<HTMLElement | null>(null);
 const work = ref<HTMLElement | null>(null);
-const workImages = ref<string[]>([ work1, work2, work3, work4, work5, work6, work7, work8, work1 ])
+const workImages = ref<string[]>(
+  [ work1, work2, work3, work4, work5, work6, work7, work8, work1 ]
+);
 
 const flexImages = computed(() => {
   const result: string[][] = [];

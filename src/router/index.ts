@@ -1,7 +1,5 @@
 import LayoutView from '@/layout/layoutView.vue';
 import HomePage from '@/views/homePage.vue';
-import AboutPage from '@/views/aboutPage.vue';
-
 
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -15,11 +13,6 @@ const routes = [
         path: '',
         name: 'home',
         component: HomePage
-      },
-      {
-        path: 'about-us',
-        name: 'about-us',
-        component: AboutPage,
       },
 
     ]
