@@ -1,19 +1,19 @@
 <template>
   <section>
-    <div class="container mx-auto px-27 py-40">
-      <div class="flex justify-between gap-52">
-        <MainHeadingText
-        title="About Me"
-        subtitle="About"
-        />
-
-        <div class="h-[350px] w-[700px] relative overflow-hidden">
-          <img
-          :src="aboutImg"
-          loading="lazy"
-          class="-translate-y-18"
-          alt="About Image"
-          ref="aboutImage"/>
+    <div class="container mx-auto px-27">
+      <div class="flex justify-between">
+        <h1 class="text-7xl font-medium w-[400px]">
+          HOW <br> DO I WORK
+        </h1>
+        <div class="w-[475px]">
+          <div>
+            <P>✺ 01</P>
+            <p>I focus on clarity, performance and user experience - starting with you goals.</p>
+          </div>
+          <div>
+            <P>✺ 02</P>
+            <p>Then crafting sleek, functional designs through research, design, development and refinement.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -21,37 +21,7 @@
 </template>
 
 <script lang="ts" setup>
-import aboutImg from '@/assets/images/about.webp'
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/all';
-import { onMounted, ref } from 'vue';
-
-import MainHeadingText from '@/components/headings/mainHeadingText.vue';
-
-const aboutImage = ref<HTMLElement | null>(null);
-
-gsap.registerPlugin(ScrollTrigger);
-
-onMounted(() => {
-  const aboutImageAnimation = gsap.from(aboutImage.value, {
-    scale: 1.5,
-    duration: 2,
-  })
-
-  ScrollTrigger.create({
-    trigger: aboutImage.value,
-    start: "top bottom",
-    end: "top -30%",
-    scrub: 1,
-    // markers: true,
-    animation: aboutImageAnimation,
-  })
-
-})
+// import gsap from 'gsap';
+// import { ScrollTrigger } from 'gsap/all';
+// import { onMounted, ref } from 'vue';
 </script>
-
-<style scoped>
-h1 {
-  --fill-width: 0%;
-}
-</style>
