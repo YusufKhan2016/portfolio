@@ -49,9 +49,3 @@ onMounted(() => {
 
 })
 </script>
-
-<style scoped>
-h1 {
-  --fill-width: 0%;
-}
-</style>

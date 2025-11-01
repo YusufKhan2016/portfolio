@@ -20,7 +20,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { onMounted, ref } from 'vue';
 
-const props = defineProps({
+defineProps({
   title: { type: String, default:"Demo Title"  },
   subtitle: { type: String, default:"Demo Subtitle " },
   titleClass: {

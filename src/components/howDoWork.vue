@@ -2,16 +2,20 @@
   <section>
     <div class="container mx-auto px-27">
       <div class="flex justify-between">
-        <h1 class="text-7xl font-medium w-[400px]">
-          HOW <br> DO I WORK
+        <h1
+          ref="fillText"
+          class="relative text-[#353535] text-7xl uppercase font-semibold leading-[0.8] w-[400px] overflow-hidden"
+        >
+          HOW<br/>DO I WORK
         </h1>
-        <div class="w-[475px]">
+
+        <div class="w-[475px] space-y-6">
           <div>
-            <P>✺ 01</P>
-            <p>I focus on clarity, performance and user experience - starting with you goals.</p>
+            <p>✺ 01</p>
+            <p>I focus on clarity, performance and user experience — starting with your goals.</p>
           </div>
           <div>
-            <P>✺ 02</P>
+            <p>✺ 02</p>
             <p>Then crafting sleek, functional designs through research, design, development and refinement.</p>
           </div>
         </div>
@@ -21,7 +25,31 @@
 </template>
 
 <script lang="ts" setup>
-// import gsap from 'gsap';
-// import { ScrollTrigger } from 'gsap/all';
-// import { onMounted, ref } from 'vue';
+import { ref, onMounted } from 'vue'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all';
+
+const fillText = ref<HTMLElement | null>(null)
+
+gsap.registerPlugin(ScrollTrigger);
+
+onMounted(() => {
+  const el = fillText.value;
+  if (!el) return
+
+  const overlay = document.createElement('span')
+  console.log(el.dataset);
+  overlay.innerHTML = 'HOW <br>DO I WORK';
+  overlay.className =
+    'absolute top-0 left-0 text-amber-50 overflow-hidden whitespace-pre w-0'
+  el.appendChild(overlay)
+
+  // Animate the fill from 0% to 100%
+  gsap.to(overlay, {
+    delay: 0.5,
+    width: '100%',
+    duration: 2,
+    ease: 'power2.out',
+  })
+})
 </script>
