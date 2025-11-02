@@ -35,8 +35,6 @@ defineProps({
 })
 
 const headingText = ref<HTMLElement | null>(null);
-gsap.registerPlugin(ScrollTrigger);
-
 
 onMounted(() => {
 
