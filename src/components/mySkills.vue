@@ -10,7 +10,7 @@
           <div
           v-for="(item, idx) in skills"
           :key="idx"
-          class="relative overflow-hidden rounded-full py-2 px-3 outline-[1.1] outline-solid outline-neutral-500 hover:outline-amber-50  outline-offset-3 transition-all">
+          class="relative overflow-hidden rounded-full py-2 px-3 outline-2 outline-solid outline-neutral-500 hover:outline-amber-50  outline-offset-3 transition-all">
             <div class="flex justify-between relative z-10 mix-blend-difference text-amber-50">
               <div class="flex">
                 <p class="mr-4 ">{{ item.sl }}</p>

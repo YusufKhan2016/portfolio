@@ -18,7 +18,9 @@ const props = defineProps({
   subtitleClass: {
     type: String,
     default: "relative text-[#353535] text-7xl uppercase font-medium w-[400px] overflow-hidden"
-  }
+  },
+  headingPinLength: { type: String, default: "340"},
+  fillTextLength: { type: String, default: "-300%"}
 })
 
 const fillText = ref<HTMLElement | null>(null);
@@ -44,7 +46,7 @@ onMounted(() => {
   ScrollTrigger.create({
     trigger: fillText.value,
     start: "top bottom",
-    end: 'top -200%',
+    end: `top ${props.fillTextLength}`,
     scrub: true,
     animation: subHeadingAnimation,
   })
@@ -52,7 +54,7 @@ onMounted(() => {
   ScrollTrigger.create({
     trigger: fillText.value,
     start: "top 5%",
-    end: "+=340",
+    end: `+=${props.headingPinLength}`,
     pin: true,
     scrub: true,
   })
