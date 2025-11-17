@@ -6,6 +6,7 @@
 <HowDoWork />
 <MySkills />
 <MyTechStacks />
+<MyExperiences />
 
 </template>
 
@@ -16,5 +17,6 @@ import HowDoWork from '@/components/howDoWork.vue';
 import MyWork from '@/components/myWork.vue';
 import MySkills from '@/components/mySkills.vue';
 import MyTechStacks from '@/components/myTechStacks.vue';
+import MyExperiences from '@/components/myExperiences.vue';
 
 </script>
