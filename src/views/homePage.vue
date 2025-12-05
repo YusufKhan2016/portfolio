@@ -7,7 +7,7 @@
 <MySkills />
 <MyTechStacks />
 <MyExperiences />
-<!-- <FeaturedWorks /> -->
+<FeaturedWorks />
 
 </template>
 
@@ -19,6 +19,6 @@ import MyWork from '@/components/myWork.vue';
 import MySkills from '@/components/mySkills.vue';
 import MyTechStacks from '@/components/myTechStacks.vue';
 import MyExperiences from '@/components/myExperiences.vue';
-// import FeaturedWorks from '@/components/featuredWorks.vue';
+import FeaturedWorks from '@/components/featuredWorks.vue';
 
 </script>

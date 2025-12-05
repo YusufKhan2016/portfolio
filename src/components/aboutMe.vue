@@ -3,7 +3,8 @@
     <div class="container mx-auto px-27 py-40">
       <div class="flex justify-between gap-52">
         <MainHeadingText
-        title="About Me"
+        title="About"
+        title2="Me"
         subtitle="About"
         />
 
