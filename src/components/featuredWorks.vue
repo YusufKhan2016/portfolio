@@ -31,7 +31,7 @@
                   <p
                   v-for="(cats, idx) in data.tags"
                   :key="idx"
-                  class="ml-4 bg-black/25 px-3 py-1 rounded-full -translate-y-[42px] group-hover:translate-y-0 duration-300"
+                  class="ml-4 bg-black/25 px-3 py-1 rounded-full -translate-y-[48px] group-hover:translate-y-0 duration-300"
                   >
                     {{ cats }}
                   </p>
