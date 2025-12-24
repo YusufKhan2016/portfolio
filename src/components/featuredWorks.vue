@@ -24,7 +24,7 @@
           :ref="el => featuredWork[idx] = el as HTMLElement"
           class="sticky top-10 bg-amber-50 w-[900px] h-[550px]  rounded-2xl my-4 overflow-hidden"
           >
-          <div class="relative w-full h-full group">
+            <router-link :to="'/featured-work/'+data.slug" class="relative w-full h-full group">
               <div class="absolute z-30 w-full flex justify-between mx-auto px-8 py-4">
                 <h1 class="space-x-2 text-2xl -translate-y-[42px] group-hover:translate-y-0 duration-300"><span>{{ data.sl }}</span><span>{{ data.title }}</span></h1>
                 <div class="flex">
@@ -41,12 +41,13 @@
                 :src="data.image_link"
                 class="w-full h-full object-cover scale-110"
                 :alt="data.title + ' image'"
+                :ref="el => featuredWorkImage[idx] = el as HTMLElement"
               >
 
               <div
                 class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300"
               ></div>
-            </div>
+            </router-link>
 
           </div>
         </div>
@@ -77,23 +78,25 @@ import featured8 from '@/assets/images/featuredWorks/featured-8.webp';
 gsap.registerPlugin(ScrollTrigger)
 
 const featuredWorksData = [
-  { sl: '01', title: "Feature 1", tags: ["Logo", "Design"], image_link: featured1 },
-  { sl: '02', title: "Feature 2", tags: ["Logo", "Design"], image_link: featured2 },
-  { sl: '03', title: "Feature 3", tags: ["Logo", "Design"], image_link: featured3 },
-  { sl: '04', title: "Feature 4", tags: ["Logo", "Design"], image_link: featured4 },
-  { sl: '05', title: "Feature 5", tags: ["Logo", "Design"], image_link: featured5 },
-  { sl: '06', title: "Feature 6", tags: ["Logo", "Design"], image_link: featured6 },
-  { sl: '07', title: "Feature 7", tags: ["Logo", "Design"], image_link: featured7 },
-  { sl: '08', title: "Feature 8", tags: ["Logo", "Design"], image_link: featured8 },
+  { sl: '01', title: "Feature 1", slug: "feature-1", tags: ["Logo", "Design"], image_link: featured1 },
+  { sl: '02', title: "Feature 2", slug: "feature-2", tags: ["Logo", "Design"], image_link: featured2 },
+  { sl: '03', title: "Feature 3", slug: "feature-3", tags: ["Logo", "Design"], image_link: featured3 },
+  { sl: '04', title: "Feature 4", slug: "feature-4", tags: ["Logo", "Design"], image_link: featured4 },
+  { sl: '05', title: "Feature 5", slug: "feature-5", tags: ["Logo", "Design"], image_link: featured5 },
+  { sl: '06', title: "Feature 6", slug: "feature-6", tags: ["Logo", "Design"], image_link: featured6 },
+  { sl: '07', title: "Feature 7", slug: "feature-7", tags: ["Logo", "Design"], image_link: featured7 },
+  { sl: '08', title: "Feature 8", slug: "feature-8", tags: ["Logo", "Design"], image_link: featured8 },
 ]
 
 const sectionBorder = ref<HTMLElement | null>(null);
 const featuredWork = ref<HTMLElement[]>([]);
+const featuredWorkImage = ref<HTMLElement[]>([]);
 
 onMounted(async () => {
   await nextTick()
-  const cards = featuredWork.value;
 
+  const cardImages = featuredWorkImage.value;
+  const cards = featuredWork.value;
   const sectionBorderAnimation = gsap.from(sectionBorder.value, {
     scaleX: 0,
     transformOrigin: "center center",
@@ -111,8 +114,17 @@ onMounted(async () => {
   if (!cards || cards.length === 0) return
 
   cards.forEach((card, idx) => {
-    if (idx === cards.length - 1) return
+    gsap.to(cardImages[idx], {
+      scale: 1,
+      scrollTrigger: {
+        trigger: cardImages[idx],
+        start: 'top 100px',
+        end: 'bottom 100px',
+        scrub: true,
+      }
+    })
 
+    if (idx === cards.length - 1) return
     gsap.to(card, {
       scale: 0.9,
       scrollTrigger: {
@@ -120,9 +132,9 @@ onMounted(async () => {
         start: 'top 100px',
         end: 'bottom 100px',
         scrub: true,
-        markers: false
       }
     })
+
   })
 })
 </script>

@@ -1,7 +1,7 @@
 <template>
   <Section>
     <div class="container mx-auto">
-      
+
       <!-- hero name section  -->
       <div
       class="flex items-center justify-center h-[400px] relative"
