@@ -55,6 +55,11 @@
   font-style: normal;
 }
 
+::view-transition-old(post-img-*),
+::view-transition-new(post-img-*) {
+  animation: none;
+}
+
 html, body {
   background-color: black;
   color: #f6f5ef;
@@ -64,3 +69,4 @@ html, body {
 body {
   overflow-x: hidden;
 }
+

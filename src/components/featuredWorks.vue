@@ -24,6 +24,7 @@
           :ref="el => featuredWork[idx] = el as HTMLElement"
           class="sticky top-10 bg-amber-50 w-[900px] h-[550px]  rounded-2xl my-4 overflow-hidden"
           >
+
             <router-link :to="'/featured-work/'+data.slug" class="relative w-full h-full group">
               <div class="absolute z-30 w-full flex justify-between mx-auto px-8 py-4">
                 <h1 class="space-x-2 text-2xl -translate-y-[42px] group-hover:translate-y-0 duration-300"><span>{{ data.sl }}</span><span>{{ data.title }}</span></h1>
@@ -40,9 +41,9 @@
               <img
                 :src="data.image_link"
                 class="w-full h-full object-cover scale-110"
-                :alt="data.title + ' image'"
-                :ref="el => featuredWorkImage[idx] = el as HTMLElement"
-              >
+                :style="{ viewTransitionName: `post-img-${data.slug}` }"
+                :alt="data.title"
+              />
 
               <div
                 class="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-all duration-300"

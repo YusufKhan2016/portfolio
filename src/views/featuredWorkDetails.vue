@@ -3,7 +3,12 @@
     <div class="container mx-auto px-26 py-20">
 
       <div class="rounded-2xl overflow-hidden h-[500px] bg-cover">
-        <img :src="featured3" :alt="featured3">
+        <img
+          :src="featured3"
+          :alt="data.title"
+          class="w-full h-full object-cover"
+          style="view-transition-name: post-img-feature-3"
+        >
       </div>
 
       <div class="flex justify-between uppercase py-10">
@@ -32,7 +37,8 @@
       <div class="pb-10" v-if="data.tools_img.length !== 0">
 
         <h1 class="text-2xl uppercase pb-2">Tools</h1>
-        <div class="flex space-x-6">
+
+          <div class="flex space-x-6">
           <img v-for="(item, idx) in data.tools_img"
           :key="idx"
           :src="item"
