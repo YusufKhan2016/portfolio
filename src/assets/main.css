@@ -55,13 +55,6 @@
   font-style: normal;
 }
 
-::view-transition-old(main) {
-  animation: 350ms ease both slide-and-fade-out;
-}
-::view-transition-new(main) {
-  animation: 350ms ease both slide-and-fade-in;
-}
-
 html, body {
   background-color: black;
   color: #f6f5ef;
