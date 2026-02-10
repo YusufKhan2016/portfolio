@@ -7,7 +7,7 @@
           :src="featured3"
           :alt="data.title"
           class="w-full h-full object-cover"
-          style="view-transition-name: post-img-feature-3"
+          :style="{ viewTransitionName: `post-img-feature-3` }"
         >
       </div>
 
@@ -77,8 +77,5 @@ const data = ref<projectDataTypes>({
   about_work: "A modern personal portfolio that effectively showcases a developer's experience, services, background, and projects, designed to increase opportunities for finding freelance or remote work.",
   tools_img: [typescript, nextjs, reactjs]
 });
-
-console.log(data.value);
-
 
 </script>

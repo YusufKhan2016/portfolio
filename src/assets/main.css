@@ -55,9 +55,11 @@
   font-style: normal;
 }
 
-::view-transition-old(post-img-*),
-::view-transition-new(post-img-*) {
-  animation: none;
+::view-transition-old(main) {
+  animation: 350ms ease both slide-and-fade-out;
+}
+::view-transition-new(main) {
+  animation: 350ms ease both slide-and-fade-in;
 }
 
 html, body {

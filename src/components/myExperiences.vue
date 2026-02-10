@@ -75,7 +75,7 @@ onMounted(async () => {
     if (idx === cards.length - 1) return
 
     gsap.to(card, {
-      scale: 0.9,
+      opacity: 1,
       scrollTrigger: {
         trigger: card,
         start: 'top 100px',

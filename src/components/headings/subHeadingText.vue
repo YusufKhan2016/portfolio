@@ -31,7 +31,6 @@ onMounted(() => {
   if (!el) return;
 
   const overlay = document.createElement('span')
-  console.log(el.dataset);
   overlay.innerHTML = `${props.firstTitle} <br>${props.secondTitle}`;
   overlay.className = 'absolute top-0 left-0 text-amber-50 overflow-hidden whitespace-pre w-0'
   el.appendChild(overlay);
