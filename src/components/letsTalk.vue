@@ -18,7 +18,7 @@
           <h1 class="text-transparent" style="-webkit-text-stroke: 2px white;">Let's Work</h1>
         </div>
 
-        <div class="mt-[-100px] uppercase text-2xl flex justify-between items-center gap-3">
+        <div class=" uppercase text-2xl flex justify-between items-center gap-3">
           <div class="flex gap-4">
             <p class="border-1 rounded-xl border-gray-500 h-16 w-45 flex items-center justify-center">
               +001647724824
@@ -88,12 +88,11 @@
               type="message"
               id="message"
               placeholder="Write your messsage here..."
-              class="w-full bg-transparent text-lg text-white
-                    placeholder-gray-400 focus:outline-none"
+              class="w-full bg-transparent text-lg text-white placeholder-gray-400 focus:outline-none pt-4"
             />
           </div>
 
-          <input type="submit" value="Send Message" class="border-1 border-gray-400 rounded-xl w-[20%] text-xl">
+          <input type="submit" value="Send Message" class="border-1 border-gray-400 rounded-xl w-[20%] bg-amber-50 text-black font-semi text-xl">
         </div>
 
       </form>
