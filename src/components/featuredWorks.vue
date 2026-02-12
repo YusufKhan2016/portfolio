@@ -22,7 +22,7 @@
           v-for="(data, idx) in featuredWorksData"
           :key="idx"
           :ref="el => featuredWork[idx] = el as HTMLElement"
-          class="sticky top-10 bg-amber-50 w-[900px] h-[550px]  rounded-2xl my-4 overflow-hidden"
+          class="sticky top-10 bg-amber-50 w-[900px] h-[500px]  rounded-2xl my-4 overflow-hidden"
           >
 
             <router-link :to="'/featured-work/'+data.slug" class="relative w-full h-full group">
@@ -91,50 +91,5 @@ const featuredWorksData = [
 
 const sectionBorder = ref<HTMLElement | null>(null);
 const featuredWork = ref<HTMLElement[]>([]);
-const featuredWorkImage = ref<HTMLElement[]>([]);
 
-onMounted(async () => {
-  await nextTick()
-
-  const cardImages = featuredWorkImage.value;
-  const cards = featuredWork.value;
-  const sectionBorderAnimation = gsap.from(sectionBorder.value, {
-    scaleX: 0,
-    transformOrigin: "center center",
-    duration: 2,
-  })
-
-  ScrollTrigger.create({
-    trigger: sectionBorder.value,
-    scrub:2,
-    animation: sectionBorderAnimation,
-    start: "top 90%",
-    end: "top 30%",
-  })
-
-  if (!cards || cards.length === 0) return
-
-  cards.forEach((card, idx) => {
-    gsap.to(cardImages[idx], {
-      scale: 1,
-      scrollTrigger: {
-        trigger: cardImages[idx],
-        start: 'top 100px',
-        end: 'bottom 100px',
-        scrub: true,
-      }
-    })
-
-    if (idx === cards.length - 1) return
-    gsap.to(card, {
-      scrollTrigger: {
-        trigger: card,
-        start: 'top 100px',
-        end: 'bottom 100px',
-        scrub: true,
-      }
-    })
-
-  })
-})
 </script>

@@ -76,6 +76,7 @@ onMounted(async () => {
 
     gsap.to(card, {
       opacity: 1,
+      scale:0.98,
       scrollTrigger: {
         trigger: card,
         start: 'top 100px',
