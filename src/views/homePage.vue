@@ -8,6 +8,7 @@
 <MyTechStacks />
 <MyExperiences />
 <FeaturedWorks />
+<LetsTalk />
 
 </template>
 
@@ -20,5 +21,6 @@ import MySkills from '@/components/mySkills.vue';
 import MyTechStacks from '@/components/myTechStacks.vue';
 import MyExperiences from '@/components/myExperiences.vue';
 import FeaturedWorks from '@/components/featuredWorks.vue';
+import LetsTalk from '@/components/letsTalk.vue';
 
 </script>

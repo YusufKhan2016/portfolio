@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container mx-auto px-27 py-40">
+    <div class="container mx-auto px-27 pt-40">
       <hr
       class="border-1 border-solid border-amber-50"
       ref="sectionBorder">
@@ -59,11 +59,10 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, onMounted } from 'vue'
 
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-
 
 import MainHeadingText from '@/components/headings/mainHeadingText.vue'
 
@@ -87,9 +86,25 @@ const featuredWorksData = [
   { sl: '06', title: "Feature 6", slug: "feature-6", tags: ["Logo", "Design"], image_link: featured6 },
   { sl: '07', title: "Feature 7", slug: "feature-7", tags: ["Logo", "Design"], image_link: featured7 },
   { sl: '08', title: "Feature 8", slug: "feature-8", tags: ["Logo", "Design"], image_link: featured8 },
-]
+];
 
 const sectionBorder = ref<HTMLElement | null>(null);
 const featuredWork = ref<HTMLElement[]>([]);
+
+onMounted(() => {
+  const sectionBorderAnimation = gsap.from(sectionBorder.value, {
+    scaleX: 0,
+    transformOrigin: "center center",
+    duration: 2,
+  })
+
+  ScrollTrigger.create({
+    trigger: sectionBorder.value,
+    scrub:2,
+    animation: sectionBorderAnimation,
+    start: "top 90%",
+    end: "top 30%",
+  })
+})
 
 </script>

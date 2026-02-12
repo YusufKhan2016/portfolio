@@ -68,7 +68,7 @@ onMounted(() => {
   ScrollTrigger.create({
     trigger: headingText.value,
     start: "top bottom",
-    end: "top -30%",
+    end: "top -10%",
     scrub: 1,
     // markers:true,
     animation: headingAnimation,
@@ -83,7 +83,7 @@ onMounted(() => {
   ScrollTrigger.create({
     trigger: headingText2.value,
     start: "top bottom",
-    end: "top -30%",
+    end: "top 0",
     scrub: 1,
     // markers:true,
     animation: headingAnimation2,
