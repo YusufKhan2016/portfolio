@@ -33,8 +33,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
     const rafsunNameAnimation = gsap.from(rafsunName.value,{
-      opacity: 0,
-      y:-100,
+      opacity: 0.5,
+      y:-50,
     })
 
     ScrollTrigger.create({
