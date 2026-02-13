@@ -39,7 +39,6 @@ onMounted(() => {
       animation: rafsunNameAnimation,
       end:"top 55%",
       start: "top 80%",
-      markers:true,
       toggleActions: 'restart none none reverse',
     })
 });
