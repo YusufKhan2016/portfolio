@@ -24,24 +24,23 @@ import { onMounted, ref } from "vue";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import logoBg from "@/assets/images/logo_bg.jpg";
-
 const rafsunName = ref<HTMLElement | null>(null);
-const selfIntro = ref<HTMLElement | null>(null);
 
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
     const rafsunNameAnimation = gsap.from(rafsunName.value,{
       opacity: 0.5,
-      y:-50,
+      // y:-50,
     })
 
     ScrollTrigger.create({
       trigger: rafsunName.value,
       animation: rafsunNameAnimation,
-      scrub: 2,
-      end:"top 50%"
+      end:"top 55%",
+      start: "top 80%",
+      markers:true,
+      toggleActions: 'restart none none reverse',
     })
 });
 
