@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="aboutMe">
     <div class="container mx-auto px-27 py-40">
       <div class="flex justify-between gap-52">
         <MainHeadingText

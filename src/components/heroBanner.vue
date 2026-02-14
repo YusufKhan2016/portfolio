@@ -15,7 +15,7 @@
 
       <!-- hero intro section   -->
       <div
-      class="flex justify-center gap-10 text-amber-50 bg-black uppercase mx-auto px-27 rounded-t-4xl overflow-hidden py-10 relative"
+      class="flex justify-center items-center gap-10 text-amber-50 bg-black uppercase mx-auto px-27 rounded-t-4xl overflow-hidden py-10 relative"
       ref="selfIntro">
         <div class="flex flex-col justify-between">
           <h1 class="text-8xl">Brand & Website Designer</h1>

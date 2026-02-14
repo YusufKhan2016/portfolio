@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-import { onMounted, ref } from "vue";
+import { nextTick, onMounted, ref } from "vue";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -28,19 +28,27 @@ const rafsunName = ref<HTMLElement | null>(null);
 
 gsap.registerPlugin(ScrollTrigger);
 
-onMounted(() => {
-    const rafsunNameAnimation = gsap.from(rafsunName.value,{
-      opacity: 0.5,
-      // y:-50,
-    })
+onMounted(async () => {
 
-    ScrollTrigger.create({
-      trigger: rafsunName.value,
-      animation: rafsunNameAnimation,
-      end:"top 55%",
-      start: "top 80%",
-      toggleActions: 'restart none none reverse',
-    })
+  await nextTick();
+  const rafsunNameAnimation = gsap.fromTo(rafsunName.value,
+    {
+    opacity: 0.5,
+    // y:-50,
+    },
+    {
+    opacity: 1,
+    // y:-50,
+    }
+  )
+
+  ScrollTrigger.create({
+    trigger: rafsunName.value,
+    animation: rafsunNameAnimation,
+    end:"top 55%",
+    start: "top 80%",
+    toggleActions: 'restart none none reverse',
+  })
 });
 
 </script>

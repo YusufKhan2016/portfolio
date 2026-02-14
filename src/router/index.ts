@@ -50,14 +50,4 @@ router.beforeEach((to, from, next) => {
   })
 })
 
-// router.beforeEach((to, from) => {
-//   if (!document.startViewTransition) return true
-
-//   return document.startViewTransition(async () => {
-//     return true
-//   }).finished
-// })
-
-
-
 export default router;
