@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <div class="container mx-auto px-27 py-40">
+  <section id="mySkills">
+    <div class="container mx-auto px-27 pt-40">
       <div class="flex justify-between">
         <SubHeadingText
           first-title="My"

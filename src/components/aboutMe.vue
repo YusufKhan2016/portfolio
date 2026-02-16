@@ -1,14 +1,15 @@
 <template>
   <section id="aboutMe">
-    <div class="container mx-auto px-27 py-40">
-      <div class="flex justify-between gap-52">
+    <div class="container mx-auto px-5 md:px-27 pt-40">
+      <div class="flex flex-col md:flex-row justify-between gap-24 md:gap-52">
         <MainHeadingText
         title="About"
         title2="Me"
         subtitle="About"
+        align="items-center md:items-start"
         />
 
-        <div class="h-[350px] w-[700px] relative overflow-hidden">
+        <div class="h-[300px] md:h-[350px] md:w-[700px] relative overflow-hidden">
           <img
           :src="aboutImg"
           loading="lazy"

@@ -1,14 +1,14 @@
 <template>
   <section>
-    <div class="container mx-auto px-27">
-      <div class="flex justify-between">
+    <div class="container mx-auto px-5 md:px-27 pt-40">
+      <div class="flex flex-col md:flex-row justify-between">
 
         <SubHeadingText
         first-title="HOW"
         second-title="DO I WORK"
         />
 
-        <div ref="paragraph" class="w-[475px] text-[39px] space-y-8">
+        <div ref="paragraph" class="md:w-[475px] text-3xl md:text-[39px] pt-18 space-y-8">
           <div>
             <p>✺ 01</p>
             <p>I focus on clarity, performance and user experience — starting with your goals.</p>

@@ -1,5 +1,5 @@
 <template>
-  <section ref="sectionRef">
+  <section id="experiences">
     <div class="container mx-auto px-27 pt-40">
       <div class="flex justify-between">
 
@@ -13,7 +13,7 @@
           v-for="(data, idx) in experiencesData"
           :key="idx"
           :ref="el => experiences[idx] = el as HTMLElement"
-          class="sticky top-10 flex justify-center items-center gap-x-8 text-amber-50 border-t-1 border-solid border-gray-700 py-12 bg-[#000]  group hover:border-amber-50 transition-all"
+          class="sticky top-18 flex justify-center items-center gap-x-8 text-amber-50 border-t-1 border-solid border-gray-700 py-12 bg-[#000]  group hover:border-amber-50 transition-all"
           >
 
             <div class="border-1 border-gray-700 group-hover:border-amber-50 flex items-center justify-center p-6 rounded-3xl">

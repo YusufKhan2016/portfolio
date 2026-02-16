@@ -1,7 +1,7 @@
 <template>
   <div
   class="flex flex-col gap-10"
-  :class="'items-'+ align">
+  :class="align">
       <div :class="subtitleClass">
         <span class="h-2 w-2 rounded-full bg-amber-50"></span>
         {{ subtitle }}
@@ -9,19 +9,19 @@
 
       <div
       class="flex flex-col"
-      :class="'items-'+ align"
+      :class="align"
       >
         <h1
         ref="headingText"
         :data-text="title"
-        class="relative text-[#353535] text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-[var(--fill-width)] before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
+        class="relative text-[#353535] text-7xl md:text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-[var(--fill-width)] before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
           {{ title }}
         </h1>
 
         <h1
         ref="headingText2"
         :data-text="title2"
-        class="relative text-[#353535] text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-[var(--fill-width)] before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
+        class="relative text-[#353535] text-7xl md:text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-[var(--fill-width)] before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
           {{ title2 }}
         </h1>
       </div>
@@ -49,7 +49,7 @@ defineProps({
   },
   align: {
     type: String,
-    default: "start"
+    default: "items-center md:items-start"
   }
 
 })

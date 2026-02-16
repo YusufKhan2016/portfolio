@@ -1,6 +1,6 @@
 <template>
-  <section>
-    <div class="container mx-auto px-27">
+  <section id="techStacks">
+    <div class="container mx-auto px-27 pt-40">
       <div class="flex justify-between items-center">
         <SubHeadingText
           first-title="My"
@@ -58,7 +58,7 @@ const techStackImages = [
 const techStacks = ref<HTMLElement[]>([]);
 
 onMounted(() => {
-  
+
   if(techStacks.value.length === 0) return;
 
   const techStacksAnimation = gsap.fromTo(

@@ -4,7 +4,7 @@ import Lenis from "lenis";
 export default {
   install(app: App) {
     const lenis = new Lenis({
-      duration: 1,
+      duration: 0.5,
       smoothWheel: true,
       lerp: 0.1,
     });

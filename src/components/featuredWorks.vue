@@ -1,18 +1,18 @@
 <template>
-  <section>
+  <section id="featuredWorks">
     <div class="container mx-auto px-27 pt-40">
       <hr
       class="border-1 border-solid border-amber-50"
-      ref="sectionBorder">
+      ref="sectionBorder" >
 
-      <div class="flex flex-col items-center">
-        <div class="flex my-24">
+      <div class="flex flex-col items-center" >
+        <div class="flex my-24" >
 
           <MainHeadingText
           title="Featured"
           title2="Works"
           subtitle="Portfolio"
-          align="center"
+          align="items-center"
           />
 
         </div>
@@ -22,7 +22,7 @@
           v-for="(data, idx) in featuredWorksData"
           :key="idx"
           :ref="el => featuredWork[idx] = el as HTMLElement"
-          class="sticky top-10 bg-amber-50 w-[900px] h-[500px]  rounded-2xl my-4 overflow-hidden"
+          class="sticky top-18 bg-amber-50 w-[900px] h-[500px]  rounded-2xl my-4 overflow-hidden"
           >
 
             <router-link :to="'/featured-work/'+data.slug" class="relative w-full h-full group">

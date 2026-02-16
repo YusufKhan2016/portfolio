@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section id="letsTalk">
     <div class="container mx-auto px-27 pt-40 mask-x-from-90%">
       <hr
       class="border-1 border-solid border-amber-50"

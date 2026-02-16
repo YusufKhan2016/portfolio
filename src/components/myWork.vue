@@ -1,25 +1,25 @@
 <template>
-  <section>
+  <section id="myWorks">
     <hr
     class="border-1 border-solid border-amber-50"
     ref="sectionBorder">
 
     <div class="container mx-auto">
-      <div class="px-27">
+      <div class="px-5 md:px-27">
 
         <!-- heading  -->
-        <div class="flex items-center justify-between py-7">
-          <h2 class="text-[#BBBBBB] w-[400px] text-2xl">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-2 py-7">
+          <h2 class="text-[#BBBBBB] md:w-[400px] text-lg md:text-2xl">
             "I design sleek, high-performance web experience that help brands stand out."
           </h2>
-          <h1 class="flex items-center text-[40px] uppercase">My Work <ArrowRight :size="45" stroke-width="1.4" /> </h1>
+          <h1 class="flex items-center text-3xl md:text-[40px] uppercase">My Works <ArrowRight :size="45" stroke-width="1.4" /> </h1>
         </div>
 
       </div>
     </div>
 
     <div class="overflow-hidden">
-      <div class="h-[150vh] scale-[1.2]"
+      <div class="md:h-[150vh] scale-[1.2]"
       ref="work">
 
         <div

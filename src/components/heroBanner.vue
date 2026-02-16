@@ -4,10 +4,10 @@
 
       <!-- hero name section  -->
       <div
-      class="flex items-center justify-center h-[400px] relative"
+      class="flex items-center justify-center md:h-[400px] relative"
       ref="rafsunName">
         <h1
-        class="uppercase font-black text-[400px] glow-text scale-x-[0.7] text-transparent bg-cover bg-left bg-clip-text"
+        class="uppercase font-black md:text-[400px] text-[150px] glow-text scale-x-[0.7] text-transparent bg-cover bg-left bg-clip-text"
         :style="{ backgroundImage: `url(${logoBg})` }">
           Rafsun
         </h1>
@@ -15,12 +15,12 @@
 
       <!-- hero intro section   -->
       <div
-      class="flex justify-center items-center gap-10 text-amber-50 bg-black uppercase mx-auto px-27 rounded-t-4xl overflow-hidden py-10 relative"
+      class="flex flex-col-reverse md:flex-row justify-center items-center gap-10 text-amber-50 bg-black uppercase mx-auto px-5 md:px-27 rounded-t-4xl overflow-hidden py-10 relative"
       ref="selfIntro">
         <div class="flex flex-col justify-between">
-          <h1 class="text-8xl">Brand & Website Designer</h1>
+          <h1 class="md:text-8xl text-3xl">Brand & Website Designer</h1>
 
-          <div class="flex items-center gap-10">
+          <div class="flex flex-col md:flex-row items-center gap-10">
             <div class="flex gap-3 text-xl">
               <li class="uppercase flex">Dribble <ArrowRight class="-rotate-45"/></li>
               <li class="uppercase flex">Github <ArrowRight class="-rotate-45"/></li>
@@ -30,13 +30,13 @@
             <div class="bg-white rounded-full h-2 w-14"></div>
 
             <div>
-              <p class="text-[40px]">Let's Talk</p>
+              <p class="md:text-[40px] text-3xl">Let's Talk</p>
             </div>
           </div>
         </div>
 
         <div class="border-4 border-solid border-amber-50 rounded-full overflow-hidden">
-          <img :src="rafsunProfile" class="bg-cover bg-center" alt="rafsun image">
+          <img :src="rafsunProfile" class="bg-cover bg-center h-50 md:h-auto" alt="rafsun image">
         </div>
       </div>
     </div>

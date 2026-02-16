@@ -1,6 +1,7 @@
 import LayoutView from '@/layout/layoutView.vue';
 import featuredWorkDetails from '@/views/featuredWorkDetails.vue';
 import HomePage from '@/views/homePage.vue';
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import { createRouter, createWebHistory } from 'vue-router'
 
@@ -30,8 +31,13 @@ const router = createRouter({
 
   scrollBehavior(to, from, savedPosition) {
 
-    if (savedPosition) {
-      return savedPosition
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: 'smooth',
+      }
+    } else if (savedPosition) {
+      return savedPosition;
     } else {
       return { top: 0 }
     }
@@ -48,6 +54,12 @@ router.beforeEach((to, from, next) => {
   document.startViewTransition(() => {
     next()
   })
+})
+
+router.afterEach(() => {
+  setTimeout(() => {
+    ScrollTrigger.refresh()
+  }, 1000)
 })
 
 export default router;

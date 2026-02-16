@@ -17,7 +17,7 @@ const props = defineProps({
   secondTitle: { type: String, default: "Demo 2"},
   subtitleClass: {
     type: String,
-    default: "relative text-[#353535] text-7xl uppercase font-medium w-[400px] overflow-hidden"
+    default: "relative text-[#353535] text-5xl  md:text-7xl uppercase font-medium w-[400px] overflow-hidden"
   },
   headingPinLength: { type: String, default: "340"},
   fillTextLength: { type: String, default: "-300%"}
@@ -52,7 +52,7 @@ onMounted(() => {
 
   ScrollTrigger.create({
     trigger: fillText.value,
-    start: "top 5%",
+    start: "top 10%",
     end: `+=${props.headingPinLength}`,
     pin: true,
     scrub: true,
