@@ -5,6 +5,8 @@
         <SubHeadingText
           first-title="My"
           second-title="Tech Stacks"
+          heading-pin-length="0"
+          fill-text-length="-100%"
         />
 
         <div class="md:w-[475px] text-[24px] pt-18 md:pt-0 uppercase">
