@@ -1,15 +1,13 @@
 <template>
   <section id="techStacks">
-    <div class="container mx-auto px-27 pt-40">
-      <div class="flex justify-between items-center">
+    <div class="container mx-auto px-5 md:px-27 pt-40">
+      <div class="flex flex-col md:flex-row justify-between">
         <SubHeadingText
           first-title="My"
           second-title="Tech Stacks"
-          heading-pin-length="0"
-          fill-text-length="-100%"
         />
 
-        <div class="w-[475px] text-[24px] uppercase">
+        <div class="md:w-[475px] text-[24px] pt-18 md:pt-0 uppercase">
           <div class="grid grid-cols-4 gap-x-4 gap-y-5">
             <div
               v-for="(img, idx) in techStackImages"

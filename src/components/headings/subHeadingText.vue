@@ -30,6 +30,9 @@ onMounted(() => {
   const el = fillText.value;
   if (!el) return;
 
+  const screenWidth = screen.width;
+  console.log(screenWidth);
+
   const overlay = document.createElement('span')
   overlay.innerHTML = `${props.firstTitle} <br>${props.secondTitle}`;
   overlay.className = 'absolute top-0 left-0 text-amber-50 overflow-hidden whitespace-pre w-0'
@@ -50,13 +53,16 @@ onMounted(() => {
     animation: subHeadingAnimation,
   })
 
-  ScrollTrigger.create({
-    trigger: fillText.value,
-    start: "top 10%",
-    end: `+=${props.headingPinLength}`,
-    pin: true,
-    scrub: true,
-  })
+  if (screenWidth >= 768) {
+    ScrollTrigger.create({
+      trigger: fillText.value,
+      start: "top 10%",
+      end: `+=${props.headingPinLength}`,
+      pin: true,
+      scrub: true,
+    })
+  }
+
 
 })
 </script>

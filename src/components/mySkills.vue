@@ -1,12 +1,12 @@
 <template>
   <section id="mySkills">
-    <div class="container mx-auto px-27 pt-40">
-      <div class="flex justify-between">
+    <div class="container mx-auto px-5 md:px-27 pt-40">
+      <div class="flex flex-col md:flex-row justify-between">
         <SubHeadingText
           first-title="My"
           second-title="Skills"
         />
-        <div class="w-[475px] text-[24px] space-y-8 uppercase">
+        <div class="w-full md:w-[475px] text-[24px] pt-18 md:pt-0 space-y-8 uppercase">
           <div
           v-for="(item, idx) in skills"
           :key="idx"

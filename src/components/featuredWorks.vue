@@ -1,6 +1,6 @@
 <template>
   <section id="featuredWorks">
-    <div class="container mx-auto px-27 pt-40">
+    <div class="container mx-auto px-5 md:px-27 pt-40">
       <hr
       class="border-1 border-solid border-amber-50"
       ref="sectionBorder" >
@@ -22,7 +22,7 @@
           v-for="(data, idx) in featuredWorksData"
           :key="idx"
           :ref="el => featuredWork[idx] = el as HTMLElement"
-          class="sticky top-18 bg-amber-50 w-[900px] h-[500px]  rounded-2xl my-4 overflow-hidden"
+          class="sticky top-18 bg-amber-50 md:w-[900px] md:h-[500px]  rounded-2xl my-4 overflow-hidden"
           >
 
             <router-link :to="'/featured-work/'+data.slug" class="relative w-full h-full group">

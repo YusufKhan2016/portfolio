@@ -1,10 +1,10 @@
 <template>
-  <footer class="relative overflow-hidden pt-35">
+  <footer class="relative overflow-hidden px-5 md:px-27 pt-35">
     <div class="container mx-auto relative">
 
       <div ref="rafsunName" class="flex justify-center z-0 w-full">
         <h1
-        class="uppercase font-black glow-text text-[530px] leading-[0.7] scale-x-[0.7] bg-cover bg-left bg-clip-text"
+        class="uppercase font-black glow-text text-[150px] md:text-[530px] leading-[0.7] scale-x-[0.7] bg-cover bg-left bg-clip-text"
         >
           Rafsun
         </h1>

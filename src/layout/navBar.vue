@@ -6,18 +6,18 @@
     >
       <ul class="relative min-w-7xl px-10 py-4 flex justify-between text-md font-semibold bg-gray-700/40 border-b-1 border-solid gap-8">
         <router-link
+        to="#myWorks"
+        class="cursor-pointer transition-all duration-300"
+        :class="activeSection === 'myWorks' ? 'text-amber-50 border-b-2 border-amber-50' : 'text-white hover:text-gray-300'"
+        >
+          My works
+        </router-link>
+        <router-link
           to="#aboutMe"
           class="cursor-pointer transition-all duration-300"
           :class="activeSection === 'aboutMe' ? 'text-amber-50 border-b-2 border-amber-50' : 'text-white hover:text-gray-300'"
         >
           About
-        </router-link>
-        <router-link
-          to="#myWorks"
-          class="cursor-pointer transition-all duration-300"
-          :class="activeSection === 'myWorks' ? 'text-amber-50 border-b-2 border-amber-50' : 'text-white hover:text-gray-300'"
-        >
-          My works
         </router-link>
         <router-link
           to="#mySkills"

@@ -1,6 +1,6 @@
 <template>
   <section id="letsTalk">
-    <div class="container mx-auto px-27 pt-40 mask-x-from-90%">
+    <div class="container mx-auto px-5 md:px-27 mask-x-from-90%">
       <hr
       class="border-1 border-solid border-amber-50"
       ref="sectionBorder">
@@ -9,7 +9,7 @@
       <div class="flex flex-col ">
 
         <div
-        class="text-[400px] tracking-tight scale-x-75 origin-left uppercase font-bold flex gap-10 whitespace-nowrap"
+        class="text-[300px] md:text-[400px] tracking-tight scale-x-75 origin-left uppercase font-bold flex gap-10 whitespace-nowrap"
         ref="titleSection"
 
         >
@@ -18,8 +18,8 @@
           <h1 class="text-transparent" style="-webkit-text-stroke: 2px white;">Let's Work</h1>
         </div>
 
-        <div class=" uppercase text-2xl flex justify-between items-center gap-3">
-          <div class="flex gap-4">
+        <div class=" uppercase text-2xl flex flex-col md:flex-row justify-between items-center gap-3">
+          <div class="flex flex-col md:flex-row items-center gap-4">
             <p class="border-1 rounded-xl border-gray-500 h-16 w-45 flex items-center justify-center">
               +001647724824
             </p>
@@ -39,7 +39,7 @@
 
       <form action="/" method="post">
 
-        <div class="flex justify-between gap-3 py-12 bg-black">
+        <div class="flex flex-col md:flex-row justify-between gap-3 py-3 md:py-12 bg-black">
           <div class="w-full relative border-1 border-solid border-gray-400 rounded-xl h-24 px-8 flex items-center">
             <label
               for="name"
@@ -75,7 +75,7 @@
           </div>
         </div>
 
-        <div class="flex justify-between gap-3 bg-black">
+        <div class="flex flex-col md:flex-row  justify-between gap-3 bg-black">
           <div class="w-full relative border border-gray-400 rounded-xl h-24 px-8 flex items-center">
             <label
               for="message"
@@ -92,7 +92,7 @@
             />
           </div>
 
-          <input type="submit" value="Send Message" class="border-1 border-gray-400 rounded-xl w-[20%] bg-amber-50 text-black font-semi text-xl">
+          <input type="submit" value="Send Message" class="w-full h-14 md:w-[20%] border-1 border-gray-400 rounded-xl bg-amber-50 text-black font-semi text-xl">
         </div>
 
       </form>

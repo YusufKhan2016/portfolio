@@ -1,14 +1,14 @@
 <template>
   <section id="experiences">
-    <div class="container mx-auto px-27 pt-40">
-      <div class="flex justify-between">
+    <div class="container mx-auto px-5 md:px-27 pt-40">
+      <div class="flex flex-col md:flex-row justify-between">
 
         <SubHeadingText
           first-title="My"
           second-title="Experience"
         />
 
-        <div class="w-[475px] relative">
+        <div class="md:w-[475px] relative pt-18 md:pt-0">
           <div
           v-for="(data, idx) in experiencesData"
           :key="idx"

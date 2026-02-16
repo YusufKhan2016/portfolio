@@ -8,7 +8,7 @@
         second-title="DO I WORK"
         />
 
-        <div ref="paragraph" class="md:w-[475px] text-3xl md:text-[39px] pt-18 space-y-8">
+        <div ref="paragraph" class="md:w-[475px] text-3xl md:text-[39px] pt-18 md:pt-0 space-y-8">
           <div>
             <p>✺ 01</p>
             <p>I focus on clarity, performance and user experience — starting with your goals.</p>
