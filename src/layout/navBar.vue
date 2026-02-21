@@ -83,42 +83,72 @@ const handleScroll = () => {
 };
 
 
-onMounted(() => {
-  watch(
-    () => route.path,
-    (val) => {
+watch(
+  () => route.path,
+  (val) => {
 
-      if (val === '/') {
-        gsap.set(navBar.value, {
-          y: -100,
-          opacity: 0,
-        });
+    if (val === '/') {
+      gsap.set(navBar.value, {
+        y: -100,
+        opacity: 0,
+      });
 
-        const navbarAnimation = gsap.to(navBar.value, {
-          y: 0,
-          opacity: 1,
-          duration: 0.6,
-          ease: "power3.out",
-          backdropFilter: "blur(40px)",
-        });
+      const navbarAnimation = gsap.to(navBar.value, {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: "power3.out",
+        backdropFilter: "blur(40px)",
+      });
 
-        ScrollTrigger.create({
-          trigger: document.body,
-          start: "top -300",
-          toggleActions: "play none none reverse",
-          animation: navbarAnimation
-        });
-      } else {
+      ScrollTrigger.create({
+        trigger: document.body,
+        start: "top -300",
+        toggleActions: "play none none reverse",
+        animation: navbarAnimation
+      });
+    } else {
 
-        gsap.set(navBar.value, {
-          y: 0,
-          opacity: 1,
-        });
-        ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-      }
+      gsap.set(navBar.value, {
+        y: 0,
+        opacity: 1,
+      });
+      ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     }
-  )
+  }
+)
+onMounted(() => {
+  if (route.path === '/') {
 
+    gsap.set(navBar.value, {
+      y: -100,
+      opacity: 0,
+    });
+
+    const navbarAnimation = gsap.to(navBar.value, {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      ease: "power3.out",
+      backdropFilter: "blur(40px)",
+    });
+
+    ScrollTrigger.create({
+      trigger: document.body,
+      start: "top -300",
+      toggleActions: "play none none reverse",
+      animation: navbarAnimation
+    });
+
+  } else {
+
+    gsap.set(navBar.value, {
+      y: 0,
+      opacity: 1,
+    });
+    ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+
+  }
 
   window.addEventListener('scroll', handleScroll);
 
