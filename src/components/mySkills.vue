@@ -49,19 +49,25 @@ const mixBlender = ref<HTMLElement | null>(null);
 
 onMounted(() => {
 
-  const mixBlenderAnimation = gsap.from(mixBlender.value, {
-    duration: 2,
-    width: 0,
-    ease: "power4.out",
-    stagger: 0.1,
-  })
+  const mm = gsap.matchMedia();
 
-  ScrollTrigger.create({
-    trigger: mixBlender.value,
-    animation: mixBlenderAnimation,
-    start: "top 90%",
-    end: "top 5%",
-    toggleActions: 'restart none none reverse',
+  mm.add("(min-width: 1280px)", () => {
+
+    const mixBlenderAnimation = gsap.from(mixBlender.value, {
+      duration: 2,
+      width: 0,
+      ease: "power4.out",
+      stagger: 0.1,
+    })
+
+    ScrollTrigger.create({
+      trigger: mixBlender.value,
+      animation: mixBlenderAnimation,
+      start: "top 90%",
+      end: "top 5%",
+      toggleActions: 'restart none none reverse',
+    })
+    
   })
 })
 </script>

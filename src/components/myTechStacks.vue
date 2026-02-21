@@ -59,29 +59,36 @@ const techStacks = ref<HTMLElement[]>([]);
 
 onMounted(() => {
 
-  if(techStacks.value.length === 0) return;
+  if (techStacks.value.length === 0) return;
 
-  const techStacksAnimation = gsap.fromTo(
-    techStacks.value,
-    {
-      y: 70,
-      opacity: 0,
-    },
-    {
-      y:0,
-      opacity: 1,
-      duration: 1.2,
-      stagger: 0.1,
-      ease: "power3.out",
-    }
-  )
+  const mm = gsap.matchMedia();
 
-  ScrollTrigger.create({
-    trigger: techStacks.value,
-    start: "top 90%",
-    animation: techStacksAnimation,
-    toggleActions: "restart none none reverse"
+  mm.add("(min-width: 1280px)", () => {
+
+    const techStacksAnimation = gsap.fromTo(
+      techStacks.value,
+      {
+        y: 70,
+        opacity: 0,
+      },
+      {
+        y:0,
+        opacity: 1,
+        duration: 1.2,
+        stagger: 0.1,
+        ease: "power3.out",
+      }
+    )
+
+    ScrollTrigger.create({
+      trigger: techStacks.value,
+      start: "top 90%",
+      animation: techStacksAnimation,
+      toggleActions: "restart none none reverse"
+    })
+    
   })
+
 
 })
 </script>

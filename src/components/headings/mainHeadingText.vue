@@ -59,41 +59,47 @@ const headingText2 = ref<HTMLElement | null>(null);
 
 onMounted(() => {
 
-  const headingAnimation = gsap.to(headingText.value, {
-    "--fill-width": "100%",
-    duration: 2,
-    ease: "power2.inOut",
-  });
+  const mm = gsap.matchMedia();
 
-  ScrollTrigger.create({
-    trigger: headingText.value,
-    start: "top bottom",
-    end: "top -10%",
-    scrub: 1,
-    // markers:true,
-    animation: headingAnimation,
-  });
+  mm.add("(min-width: 1280px)", () => {
 
-  const headingAnimation2 = gsap.to(headingText2.value, {
-    "--fill-width": "100%",
-    duration: 2,
-    ease: "power2.inOut",
-  });
+    const headingAnimation = gsap.from(headingText.value, {
+      "--fill-width": "0%",
+      duration: 2,
+      ease: "power2.inOut",
+    });
 
-  ScrollTrigger.create({
-    trigger: headingText2.value,
-    start: "top bottom",
-    end: "top 0",
-    scrub: 1,
-    // markers:true,
-    animation: headingAnimation2,
-  });
+    ScrollTrigger.create({
+      trigger: headingText.value,
+      start: "top bottom",
+      end: "top -10%",
+      scrub: 1,
+      // markers:true,
+      animation: headingAnimation,
+    });
+
+    const headingAnimation2 = gsap.from(headingText2.value, {
+      "--fill-width": "0%",
+      duration: 2,
+      ease: "power2.inOut",
+    });
+
+    ScrollTrigger.create({
+      trigger: headingText2.value,
+      start: "top bottom",
+      end: "top 0",
+      scrub: 1,
+      // markers:true,
+      animation: headingAnimation2,
+    });
+  })
+
 
 })
 </script>
 
 <style scoped>
 h1 {
-  --fill-width: 0%;
+  --fill-width: 100%;
 }
 </style>

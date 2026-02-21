@@ -74,31 +74,36 @@ const flexImages = computed(() => {
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  const sectionBorderAnimation = gsap.from(sectionBorder.value, {
-    scaleX: 0,
-    transformOrigin: "center center",
-    duration: 2,
-  })
-  const workAnimation = gsap.fromTo(
-    work.value,
-    { scale:2 },
-    { scale: 1.1 }
-  )
+  const mm = gsap.matchMedia();
 
-  ScrollTrigger.create({
-    trigger: sectionBorder.value,
-    scrub:2,
-    animation: sectionBorderAnimation,
-    start: "top 90%",
-    end: "top 30%",
-  })
-  ScrollTrigger.create({
-    trigger: work.value,
-    scrub:2,
-    animation: workAnimation,
-    start: "top 80%",
-    end: "bottom 20%",
-    // markers:true,
+  mm.add("(min-width: 1280px)", () => {
+
+    const sectionBorderAnimation = gsap.from(sectionBorder.value, {
+      scaleX: 0,
+      transformOrigin: "center center",
+      duration: 2,
+    })
+    const workAnimation = gsap.fromTo(
+      work.value,
+      { scale:2 },
+      { scale: 1.1 }
+    )
+
+    ScrollTrigger.create({
+      trigger: sectionBorder.value,
+      scrub:2,
+      animation: sectionBorderAnimation,
+      start: "top 90%",
+      end: "top 30%",
+    })
+    ScrollTrigger.create({
+      trigger: work.value,
+      scrub:2,
+      animation: workAnimation,
+      start: "top 80%",
+      end: "bottom 20%",
+      // markers:true,
+    })
   })
 
 })

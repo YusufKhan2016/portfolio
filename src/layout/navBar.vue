@@ -2,9 +2,9 @@
   <header class="">
     <div
       ref="navBar"
-      class="fixed translate-x-1/2 right-1/2 z-[111111] mt-1 rounded-[10px_10px_20px_20px] overflow-hidden mx-auto"
+      class="hidden md:block fixed translate-x-1/2 right-1/2 z-[111111] mt-1 rounded-[10px_10px_20px_20px] overflow-hidden mx-auto"
     >
-      <ul class="relative min-w-7xl px-10 py-4 flex justify-between text-md font-semibold bg-gray-700/40 border-b-1 border-solid gap-8">
+      <ul class="relative min-w-[1200px] px-10 py-4 flex justify-between text-md font-semibold bg-gray-700/40 border-b-1 border-solid gap-8">
         <router-link
         to="#myWorks"
         class="cursor-pointer transition-all duration-300"

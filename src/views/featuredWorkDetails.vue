@@ -1,8 +1,8 @@
 <template>
   <section>
-    <div class="container mx-auto px-26 py-20 flex flex-row-reverse gap-7">
+    <div class="container mx-auto p-4 lg:px-26 lg:py-20 flex flex-col lg:flex-row-reverse gap-7">
 
-      <div class="rounded-2xl overflow-hidden h-[500px] w-[500px] bg-cover">
+      <div class="rounded-2xl overflow-hidden xl:h-[500px] xl:w-[500px] xl:bg-cover">
         <img
           :src="featured3"
           :alt="data.title"
@@ -12,17 +12,17 @@
       </div>
 
       <div>
-        <div class="flex justify-between uppercase py-10">
+        <div class="flex flex-col lg:flex-row space-y-5 justify-between uppercase py-10">
 
           <h1 class="text-5xl">{{ data.title }}</h1>
-          <div class="flex items-center justify-between px-4 rounded-xl text-3xl border-2 border-solid border-amber-50">Visit Site <ArrowRight :size="35" stroke-width="1.4" class="transform rotate-[315deg]"/></div>
+          <div class="flex items-center w-46 lg:w-auto justify-between px-4 rounded-xl text-3xl border-2 border-solid border-amber-50">Visit Site <ArrowRight :size="35" stroke-width="1.4" class="transform rotate-[315deg]"/></div>
 
         </div>
 
         <div class="pb-10" v-if="data.project_tags.length !== 0">
 
           <h1 class="text-2xl uppercase pb-2">Project Tags</h1>
-          <div class="text-[#BBBBBB] flex space-x-3">
+          <div class="text-[#BBBBBB] flex flex-wrap xl:flex-nowrap space-x-3 space-y-3 lg:space-y-0">
             <p v-for="(item, idx) in data.project_tags" :key="idx" class="text-md border-2 border-solid border-[#BBBBBB] rounded-lg px-2">{{ item }}</p>
           </div>
 

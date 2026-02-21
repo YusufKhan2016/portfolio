@@ -35,18 +35,25 @@ const aboutImage = ref<HTMLElement | null>(null);
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  const aboutImageAnimation = gsap.from(aboutImage.value, {
-    scale: 1.5,
-    duration: 2,
-  })
 
-  ScrollTrigger.create({
-    trigger: aboutImage.value,
-    start: "top bottom",
-    end: "top -30%",
-    scrub: 1,
-    // markers: true,
-    animation: aboutImageAnimation,
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 1280px)", () => {
+
+    const aboutImageAnimation = gsap.from(aboutImage.value, {
+      scale: 1.5,
+      duration: 2,
+    })
+
+    ScrollTrigger.create({
+      trigger: aboutImage.value,
+      start: "top bottom",
+      end: "top -30%",
+      scrub: 1,
+      // markers: true,
+      animation: aboutImageAnimation,
+    })
+    
   })
 
 })

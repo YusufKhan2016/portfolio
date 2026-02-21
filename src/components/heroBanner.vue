@@ -59,36 +59,43 @@ const selfIntro = ref<HTMLElement | null>(null);
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-  gsap.from(rafsunName.value, {
-      filter: "blur(10px)",
-      opacity: 0,
-      duration:2,
-    }
-  )
 
-  const nameAnimation = gsap.fromTo(
-    rafsunName.value,
-    {
-      opacity: 1,
-      scale: 1.04,
-      ease: "power3.inOut"
-    },
-    {
-      opacity: 0,
-      scale: 0.98,
-      ease: "power3.inOut"
-    }
-  );
+  const mm = gsap.matchMedia();
 
-  ScrollTrigger.create({
-    start: "top top",
-    end: "400px",
-    pin: rafsunName.value,
-    pinSpacing: false,
-    scrub: 1,
-    toggleActions: "restart none none reverse",
-    // markers: true,
-    animation: nameAnimation,
+  mm.add("(min-width: 1280px)", () => {
+
+    gsap.from(rafsunName.value, {
+        filter: "blur(10px)",
+        opacity: 0,
+        duration:2,
+      }
+    )
+
+    const nameAnimation = gsap.fromTo(
+      rafsunName.value,
+      {
+        opacity: 1,
+        scale: 1.04,
+        ease: "power3.inOut"
+      },
+      {
+        opacity: 0,
+        scale: 0.98,
+        ease: "power3.inOut"
+      }
+    );
+
+    ScrollTrigger.create({
+      start: "top top",
+      end: "400px",
+      pin: rafsunName.value,
+      pinSpacing: false,
+      scrub: 1,
+      toggleActions: "restart none none reverse",
+      // markers: true,
+      animation: nameAnimation,
+    })
+    
   })
 
 });

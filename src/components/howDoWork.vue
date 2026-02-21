@@ -35,20 +35,26 @@ const paragraph = ref<HTMLElement | null>(null);
 
 onMounted(() => {
   const paraEl = paragraph.value;
-  if(!paraEl) return
+  if (!paraEl) return
 
-  const splittedParagraph = new SplitText(paraEl, { type: "chars, words"})
-  const lineAnimation = gsap.from(splittedParagraph.chars, {
-    opacity: 0.4,
-    stagger: 1,
-  })
+  const mm = gsap.matchMedia();
 
-  ScrollTrigger.create({
-    trigger: paraEl,
-    start: 'top 90%',
-    end: 'top -50%',
-    scrub: true,
-    animation: lineAnimation,
+  mm.add("(min-width: 1280px)", () => {
+
+    const splittedParagraph = new SplitText(paraEl, { type: "chars, words"})
+    const lineAnimation = gsap.from(splittedParagraph.chars, {
+      opacity: 0.4,
+      stagger: 1,
+    })
+
+    ScrollTrigger.create({
+      trigger: paraEl,
+      start: 'top 90%',
+      end: 'top -50%',
+      scrub: true,
+      animation: lineAnimation,
+    })
+
   })
 
 })

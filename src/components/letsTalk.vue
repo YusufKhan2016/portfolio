@@ -1,15 +1,15 @@
 <template>
   <section id="letsTalk">
-    <div class="container mx-auto px-5 md:px-27 mask-x-from-90%">
+    <div class="container mx-auto px-5 md:px-27 pt-20 mask-x-from-90%">
       <hr
       class="border-1 border-solid border-amber-50"
       ref="sectionBorder">
 
 
-      <div class="flex flex-col ">
+      <div class="flex flex-col items-center xl:items-start">
 
         <div
-        class="text-[300px] md:text-[400px] tracking-tight scale-x-75 origin-left uppercase font-bold flex gap-10 whitespace-nowrap"
+        class="text-[55px] xl:text-[400px] tracking-tight py-20 xl:py-0 scale-x-75 xl:origin-left uppercase font-bold flex justify-center gap-10 whitespace-nowrap"
         ref="titleSection"
 
         >
@@ -39,7 +39,7 @@
 
       <form action="/" method="post">
 
-        <div class="flex flex-col md:flex-row justify-between gap-3 py-3 md:py-12 bg-black">
+        <div class="flex flex-col md:flex-row justify-between gap-3 py-12 bg-black">
           <div class="w-full relative border-1 border-solid border-gray-400 rounded-xl h-24 px-8 flex items-center">
             <label
               for="name"
@@ -112,30 +112,37 @@ const sectionBorder = ref<HTMLElement | null>(null);
 const titleSection = ref<HTMLElement | null>(null);
 
 onMounted(() => {
-  const sectionBorderAnimation = gsap.from(sectionBorder.value, {
-    scaleX: 0,
-    transformOrigin: "center center",
-    duration: 2,
-  })
 
-  ScrollTrigger.create({
-    trigger: sectionBorder.value,
-    scrub:2,
-    animation: sectionBorderAnimation,
-    start: "top 90%",
-    end: "top 30%",
-  })
+  const mm = gsap.matchMedia();
 
-  const titleSectionAnimation = gsap.to(titleSection.value, {
-    x: "-120%",
-  })
+  mm.add("(min-width: 1280px)", () => {
 
-  ScrollTrigger.create({
-    trigger: titleSection.value,
-    animation: titleSectionAnimation,
-    scrub: 2,
-    start: "top 25%",
-    end: "top -30%"
+    const sectionBorderAnimation = gsap.from(sectionBorder.value, {
+      scaleX: 0,
+      transformOrigin: "center center",
+      duration: 2,
+    })
+
+    ScrollTrigger.create({
+      trigger: sectionBorder.value,
+      scrub:2,
+      animation: sectionBorderAnimation,
+      start: "top 90%",
+      end: "top 30%",
+    })
+
+    const titleSectionAnimation = gsap.to(titleSection.value, {
+      x: "-120%",
+    })
+
+    ScrollTrigger.create({
+      trigger: titleSection.value,
+      animation: titleSectionAnimation,
+      scrub: 2,
+      start: "top 25%",
+      end: "top -260%",
+    })
+
   })
 })
 

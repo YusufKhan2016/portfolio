@@ -35,34 +35,39 @@ onMounted(() => {
 
   const overlay = document.createElement('span')
   overlay.innerHTML = `${props.firstTitle} <br>${props.secondTitle}`;
-  overlay.className = 'absolute top-0 left-0 text-amber-50 overflow-hidden whitespace-pre w-0'
+  overlay.className = 'absolute top-0 left-0 text-amber-50 overflow-hidden whitespace-pre w-full'
   el.appendChild(overlay);
 
-  const subHeadingAnimation = gsap.to(overlay, {
-    delay: 0.5,
-    width: '100%',
-    duration: 2,
-    ease: 'power2.out',
-  })
+  const mm = gsap.matchMedia();
 
-  ScrollTrigger.create({
-    trigger: fillText.value,
-    start: "top bottom",
-    end: `top ${props.fillTextLength}`,
-    scrub: true,
-    animation: subHeadingAnimation,
-  })
+  mm.add("(min-width: 1280px)", () => {
 
-  if (screenWidth >= 768) {
+    const subHeadingAnimation = gsap.from(overlay, {
+      delay: 0.5,
+      width: '0%',
+      duration: 2,
+      ease: 'power2.out',
+    })
+
     ScrollTrigger.create({
       trigger: fillText.value,
-      start: "top 10%",
-      end: `+=${props.headingPinLength}`,
-      pin: true,
+      start: "top bottom",
+      end: `top ${props.fillTextLength}`,
       scrub: true,
+      animation: subHeadingAnimation,
     })
-  }
 
+    if (screenWidth >= 768) {
+      ScrollTrigger.create({
+        trigger: fillText.value,
+        start: "top 10%",
+        end: `+=${props.headingPinLength}`,
+        pin: true,
+        scrub: true,
+      })
+    }
+
+  })
 
 })
 </script>

@@ -22,7 +22,7 @@
           v-for="(data, idx) in featuredWorksData"
           :key="idx"
           :ref="el => featuredWork[idx] = el as HTMLElement"
-          class="sticky top-18 bg-amber-50 md:w-[900px] md:h-[500px]  rounded-2xl my-4 overflow-hidden"
+          class="xl:sticky top-18 bg-amber-50 md:w-[900px] md:h-[500px]  rounded-2xl my-4 overflow-hidden"
           >
 
             <router-link :to="'/featured-work/'+data.slug" class="relative w-full h-full group">
@@ -92,18 +92,25 @@ const sectionBorder = ref<HTMLElement | null>(null);
 const featuredWork = ref<HTMLElement[]>([]);
 
 onMounted(() => {
-  const sectionBorderAnimation = gsap.from(sectionBorder.value, {
-    scaleX: 0,
-    transformOrigin: "center center",
-    duration: 2,
-  })
 
-  ScrollTrigger.create({
-    trigger: sectionBorder.value,
-    scrub:2,
-    animation: sectionBorderAnimation,
-    start: "top 90%",
-    end: "top 30%",
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 1280px)", () => {
+
+    const sectionBorderAnimation = gsap.from(sectionBorder.value, {
+      scaleX: 0,
+      transformOrigin: "center center",
+      duration: 2,
+    })
+
+    ScrollTrigger.create({
+      trigger: sectionBorder.value,
+      scrub:2,
+      animation: sectionBorderAnimation,
+      start: "top 90%",
+      end: "top 30%",
+    })
+    
   })
 })
 

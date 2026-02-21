@@ -37,11 +37,11 @@ const router = createRouter({
         behavior: 'smooth',
       }
     }
-    // else if (savedPosition) {
-    //   return savedPosition;
-    // } else {
-    //   return { top: 0 }
-    // }
+    else if (savedPosition) {
+      return savedPosition;
+    } else {
+      return { top: 0 }
+    }
 
   },
 })
