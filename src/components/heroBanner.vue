@@ -15,22 +15,22 @@
 
       <!-- hero intro section   -->
       <div
-      class="flex flex-col-reverse md:flex-row justify-center items-center gap-10 text-amber-50 bg-black uppercase mx-auto px-5 md:px-27 rounded-t-4xl overflow-hidden py-10 relative"
+      class="flex flex-col-reverse md:flex-row justify-center items-center gap-10 text-amber-50 bg-black uppercase mx-auto px-5 lg:px-27 rounded-t-4xl overflow-hidden py-10 relative"
       ref="selfIntro">
         <div class="flex flex-col justify-between">
-          <h1 class="md:text-8xl text-3xl">Brand & Website Designer</h1>
+          <h1 class="md:text-6xl lg:text-7xl xl:text-8xl text-3xl">Brand & Website Designer</h1>
 
-          <div class="flex flex-col md:flex-row items-center gap-10">
+          <div class="flex flex-col md:flex-row items-center gap-3 lg:gap-6 xl:gap-10">
             <div class="flex gap-3 text-xl">
               <li class="uppercase flex">Dribble <ArrowRight class="-rotate-45"/></li>
               <li class="uppercase flex">Github <ArrowRight class="-rotate-45"/></li>
               <li class="uppercase flex">Linkedin <ArrowRight class="-rotate-45"/></li>
             </div>
 
-            <div class="bg-white rounded-full h-2 w-14"></div>
+            <div class="bg-white rounded-full h-2 w-14 lg:w-8 xl:w-14"></div>
 
             <div>
-              <p class="md:text-[40px] text-3xl">Let's Talk</p>
+              <p class="xl:text-[40px] lg:text-[20px] md:text-[18px] text-3xl">Let's Talk</p>
             </div>
           </div>
         </div>
@@ -95,10 +95,10 @@ onMounted(() => {
       // markers: true,
       animation: nameAnimation,
     })
-    
-  })
 
-});
+  });
+
+})
 </script>
 
 <style scoped>

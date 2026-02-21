@@ -5,7 +5,7 @@
     ref="sectionBorder">
 
     <div class="container mx-auto">
-      <div class="px-5 md:px-27">
+      <div class="px-5 lg:px-27">
 
         <!-- heading  -->
         <div class="flex flex-col md:flex-row items-center justify-between gap-2 py-7">
@@ -19,7 +19,7 @@
     </div>
 
     <div class="overflow-hidden">
-      <div class="md:h-[150vh] scale-[1.2]"
+      <div class="xl:h-[150vh] scale-[1.2]"
       ref="work">
 
         <div

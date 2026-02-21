@@ -1,6 +1,6 @@
 <template>
   <section id="letsTalk">
-    <div class="container mx-auto px-5 md:px-27 pt-20 mask-x-from-90%">
+    <div class="container mx-auto px-5 lg:px-27 pt-20 mask-x-from-90%">
       <hr
       class="border-1 border-solid border-amber-50"
       ref="sectionBorder">
@@ -18,7 +18,7 @@
           <h1 class="text-transparent" style="-webkit-text-stroke: 2px white;">Let's Work</h1>
         </div>
 
-        <div class=" uppercase text-2xl flex flex-col md:flex-row justify-between items-center gap-3">
+        <div class=" uppercase text-2xl flex flex-col lg:flex-row justify-between items-center gap-3">
           <div class="flex flex-col md:flex-row items-center gap-4">
             <p class="border-1 rounded-xl border-gray-500 h-16 w-45 flex items-center justify-center">
               +001647724824

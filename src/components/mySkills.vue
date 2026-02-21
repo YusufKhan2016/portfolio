@@ -1,6 +1,6 @@
 <template>
   <section id="mySkills">
-    <div class="container mx-auto px-5 md:px-27 pt-40">
+    <div class="container mx-auto px-5 lg:px-27 pt-40">
       <div class="flex flex-col md:flex-row justify-between">
         <SubHeadingText
           first-title="My"
@@ -67,7 +67,7 @@ onMounted(() => {
       end: "top 5%",
       toggleActions: 'restart none none reverse',
     })
-    
+
   })
 })
 </script>

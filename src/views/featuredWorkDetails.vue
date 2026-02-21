@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="container mx-auto p-4 lg:px-26 lg:py-20 flex flex-col lg:flex-row-reverse gap-7">
+    <div class="container mx-auto p-4 xl:px-26 lg:py-20 flex flex-col lg:flex-row-reverse gap-7">
 
       <div class="rounded-2xl overflow-hidden xl:h-[500px] xl:w-[500px] xl:bg-cover">
         <img

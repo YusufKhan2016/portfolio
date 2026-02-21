@@ -4,7 +4,7 @@
 
       <div ref="rafsunName" class="flex justify-center z-0 w-full">
         <h1
-        class="uppercase font-black glow-text text-[150px] md:text-[530px] leading-[0.7] scale-x-[0.7] bg-cover bg-left bg-clip-text"
+        class="uppercase font-black glow-text text-[150px] md:text-[300px] lg:text-[520px] leading-[0.7] scale-x-[0.7] bg-cover bg-left bg-clip-text"
         >
           Rafsun
         </h1>
