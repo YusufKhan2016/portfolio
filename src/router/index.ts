@@ -1,29 +1,11 @@
-import LayoutView from '@/layout/layoutView.vue';
-import featuredWorkDetails from '@/views/featuredWorkDetails.vue';
-import HomePage from '@/views/homePage.vue';
-import ScrollTrigger from 'gsap/ScrollTrigger'
-
 import { createRouter, createWebHistory } from 'vue-router'
 
-const routes = [
-  {
-    path: '/',
-    component: LayoutView,
-    children: [
+import ScrollTrigger from 'gsap/ScrollTrigger'
 
-      {
-        path: '',
-        name: 'home',
-        component: HomePage
-      },
-      {
-        path: 'featured-work/:slug',
-        component: featuredWorkDetails
-      },
+import website from '@/router/website/website.ts';
+import login from '@/router/admin/login';
 
-    ]
-  }
-];
+const routes = [ ...website, ...login];
 
 const router = createRouter({
   history: createWebHistory(),

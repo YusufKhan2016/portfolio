@@ -7,10 +7,14 @@ import App from './App.vue'
 import router from './router'
 import lenis from "./plugins/lenis"
 
+import ui from '@nuxt/ui/vue-plugin'
+
 const app = createApp(App)
 
 app.use(lenis)
 app.use(createPinia())
 app.use(router)
+
+app.use(ui)
 
 app.mount('#app')

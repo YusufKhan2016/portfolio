@@ -31,7 +31,6 @@ onMounted(() => {
   if (!el) return;
 
   const screenWidth = screen.width;
-  console.log(screenWidth);
 
   const overlay = document.createElement('span')
   overlay.innerHTML = `${props.firstTitle} <br>${props.secondTitle}`;

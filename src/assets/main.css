@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import "@nuxt/ui";
 
 @font-face {
   font-family: "Saira Condensed";
@@ -55,7 +56,7 @@
   font-style: normal;
 }
 
-html, body {
+.website-theme {
   background-color: black;
   color: #f6f5ef;
   font-family: "Saira Condensed", sans-serif;
