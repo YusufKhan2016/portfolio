@@ -4,7 +4,7 @@
 
       <!-- hero name section  -->
       <div
-      class="flex items-center justify-center md:h-[400px] relative"
+      class="flex items-center justify-center md:h-100 relative"
       ref="rafsunName">
         <h1
         class="uppercase font-black md:text-[400px] text-[150px] glow-text scale-x-[0.7] text-transparent bg-cover bg-left bg-clip-text"

@@ -9,13 +9,13 @@
           fill-text-length="-100%"
         />
 
-        <div class="md:w-[475px] text-[24px] pt-18 md:pt-0 uppercase">
+        <div class="md:w-118.75 text-[24px] pt-18 md:pt-0 uppercase">
           <div class="grid grid-cols-4 gap-x-4 gap-y-5">
             <div
               v-for="(img, idx) in techStackImages"
               :key="idx"
               ref="techStacks"
-              class="tech-stack-item border-1 border-gray-700 hover:border-amber-50 rounded-full w-25 h-25 flex justify-center items-center grayscale hover:grayscale-0 transition-[border-color, filter]"
+              class="tech-stack-item border border-gray-700 hover:border-amber-50 rounded-full w-25 h-25 flex justify-center items-center grayscale hover:grayscale-0 transition-[border-color, filter]"
             >
               <img
                 :src="img"

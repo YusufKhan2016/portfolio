@@ -2,7 +2,7 @@
   <section id="letsTalk">
     <div class="container mx-auto px-5 lg:px-27 pt-20 mask-x-from-90%">
       <hr
-      class="border-1 border-solid border-amber-50"
+      class="border border-solid border-amber-50"
       ref="sectionBorder">
 
 
@@ -20,13 +20,13 @@
 
         <div class=" uppercase text-2xl flex flex-col lg:flex-row justify-between items-center gap-3">
           <div class="flex flex-col md:flex-row items-center gap-4">
-            <p class="border-1 rounded-xl border-gray-500 h-16 w-45 flex items-center justify-center">
+            <p class="border rounded-xl border-gray-500 h-16 w-45 flex items-center justify-center">
               +001647724824
             </p>
-            <p class="border-1 rounded-xl border-gray-500 h-16 w-75 flex items-center justify-center">
+            <p class="border rounded-xl border-gray-500 h-16 w-75 flex items-center justify-center">
               hasanrafsun5@gmail.com
             </p>
-            <p class="border-1 rounded-xl border-gray-500 h-16 w-55 flex items-center justify-center">
+            <p class="border rounded-xl border-gray-500 h-16 w-55 flex items-center justify-center">
               Dhaka, Bangladesh
             </p>
           </div>
@@ -40,7 +40,7 @@
       <form action="/" method="post">
 
         <div class="flex flex-col md:flex-row justify-between gap-3 py-12 bg-black">
-          <div class="w-full relative border-1 border-solid border-gray-400 rounded-xl h-24 px-8 flex items-center">
+          <div class="w-full relative border border-solid border-gray-400 rounded-xl h-24 px-8 flex items-center">
             <label
               for="name"
               class="absolute -top-3 left-8 px-3 bg-black text-sm uppercase tracking-wider text-amber-50"
@@ -92,7 +92,7 @@
             />
           </div>
 
-          <input type="submit" value="Send Message" class="w-full h-14 md:w-[20%] border-1 border-gray-400 rounded-xl bg-amber-50 text-black font-semi text-xl">
+          <input type="submit" value="Send Message" class="w-full h-14 md:w-[20%] border border-gray-400 rounded-xl bg-amber-50 text-black font-semi text-xl">
         </div>
 
       </form>

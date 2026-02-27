@@ -2,7 +2,7 @@
   <section id="featuredWorks">
     <div class="container mx-auto px-5 lg:px-0 pt-40">
       <hr
-      class="border-1 border-solid border-amber-50"
+      class="border border-solid border-amber-50"
       ref="sectionBorder" >
 
       <div class="flex flex-col items-center" >
@@ -22,17 +22,17 @@
           v-for="(data, idx) in featuredWorksData"
           :key="idx"
           :ref="el => featuredWork[idx] = el as HTMLElement"
-          class="xl:sticky top-18 bg-amber-50 lg:w-[900px] lg:h-[500px]  rounded-2xl my-4 overflow-hidden"
+          class="xl:sticky top-18 bg-amber-50 lg:w-225 lg:h-125  rounded-2xl my-4 overflow-hidden"
           >
 
             <router-link :to="'/featured-work/'+data.slug" class="relative w-full h-full group">
               <div class="absolute z-30 w-full flex justify-between mx-auto px-8 py-4">
-                <h1 class="space-x-2 text-2xl -translate-y-[42px] group-hover:translate-y-0 duration-300"><span>{{ data.sl }}</span><span>{{ data.title }}</span></h1>
+                <h1 class="space-x-2 text-2xl -translate-y-10.5 group-hover:translate-y-0 duration-300"><span>{{ data.sl }}</span><span>{{ data.title }}</span></h1>
                 <div class="flex">
                   <p
                   v-for="(cats, idx) in data.tags"
                   :key="idx"
-                  class="ml-4 bg-black/25 px-3 py-1 rounded-full -translate-y-[48px] group-hover:translate-y-0 duration-300"
+                  class="ml-4 bg-black/25 px-3 py-1 rounded-full -translate-y-12 group-hover:translate-y-0 duration-300"
                   >
                     {{ cats }}
                   </p>

@@ -14,14 +14,14 @@
         <h1
         ref="headingText"
         :data-text="title"
-        class="relative text-[#353535] text-7xl md:text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-[var(--fill-width)] before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
+        class="relative text-[#353535] text-7xl md:text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-(--fill-width) before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
           {{ title }}
         </h1>
 
         <h1
         ref="headingText2"
         :data-text="title2"
-        class="relative text-[#353535] text-7xl md:text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-[var(--fill-width)] before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
+        class="relative text-[#353535] text-7xl md:text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-(--fill-width) before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]">
           {{ title2 }}
         </h1>
       </div>
@@ -41,7 +41,7 @@ defineProps({
   subtitle: { type: String, default:"Demo Subtitle" },
   titleClass: {
     type: String,
-    default: "relative text-[#353535] text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-[var(--fill-width)] before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]"
+    default: "relative text-[#353535] text-[145px] 2xl:text-[200px] uppercase before:content-[attr(data-text)] before:absolute before:top-0 before:left-0 before:w-(--fill-width) before:text-amber-50 before:overflow-hidden  font-semibold leading-[0.8]"
   },
   subtitleClass: {
     type: String,

@@ -9,7 +9,7 @@
         align="items-center md:items-start"
         />
 
-        <div class="h-[300px] md:h-[350px] md:w-[700px] relative overflow-hidden">
+        <div class="h-75 md:h-87.5 md:w-175 relative overflow-hidden">
           <img
           :src="aboutImg"
           loading="lazy"

@@ -6,7 +6,7 @@
           first-title="My"
           second-title="Skills"
         />
-        <div class="w-full md:w-[475px] text-[24px] pt-18 md:pt-0 space-y-8 uppercase">
+        <div class="w-full md:w-118.75 text-[24px] pt-18 md:pt-0 space-y-8 uppercase">
           <div
           v-for="(item, idx) in skills"
           :key="idx"
@@ -21,7 +21,7 @@
             <div
             ref="mixBlender"
             :style="{ width: item.value}"
-            class="absolute top-0 left-0 h-full bg-amber-50 rounded-full z-[1]"></div>
+            class="absolute top-0 left-0 h-full bg-amber-50 rounded-full z-1"></div>
           </div>
         </div>
       </div>

@@ -8,15 +8,15 @@
           second-title="Experience"
         />
 
-        <div class="md:w-[475px] relative pt-18 md:pt-0">
+        <div class="md:md:w-118.75 relative pt-18 md:pt-0">
           <div
           v-for="(data, idx) in experiencesData"
           :key="idx"
           :ref="el => experiences[idx] = el as HTMLElement"
-          class="xl:sticky top-18 flex justify-center items-center gap-x-8 text-amber-50 border-t-1 border-solid border-gray-700 py-12 bg-[#000]  group hover:border-amber-50 transition-all"
+          class="xl:sticky top-18 flex justify-center items-center gap-x-8 text-amber-50 border-t border-solid border-gray-700 py-12 bg-black  group hover:border-amber-50 transition-all"
           >
 
-            <div class="border-1 border-gray-700 group-hover:border-amber-50 flex items-center justify-center p-6 rounded-3xl">
+            <div class="border border-gray-700 group-hover:border-amber-50 flex items-center justify-center p-6 rounded-3xl">
               {{ data.start_year }} - {{ data.end_year }}
             </div>
 

@@ -1,9 +1,9 @@
 <template>
-  <UApp class="h-svh ">
-    <UContainer>
+  <UApp>
+    <UContainer class="h-svh flex flex-col-reverse justify-center items-center">
 
       <div class="flex justify-end items-end p-5">
-        <UColorModeSwitch />
+        <UColorModeSwitch color="primary" size="xl"/>
       </div>
 
       <UAuthForm
@@ -14,7 +14,7 @@
         :schema="schemaValidation"
         @submit="onSubmit"
         :loading="loading"
-        class="md:w-100 bg-transparent border border-solid border-[green] rounded-xl mx-auto p-2 sm:p-4 lg:p-5 transform backdrop-blur-3xl translate-y-1/2"
+        class="md:w-100 bg-transparent border border-solid border-[green] rounded-xl mx-auto p-2 sm:p-4 lg:p-5 transform backdrop-blur-3xl "
       />
 
     </UContainer>

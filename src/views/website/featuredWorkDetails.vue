@@ -2,7 +2,7 @@
   <section>
     <div class="container mx-auto p-4 xl:px-26 lg:py-20 flex flex-col lg:flex-row-reverse gap-7">
 
-      <div class="rounded-2xl overflow-hidden xl:h-[500px] xl:w-[500px] xl:bg-cover">
+      <div class="rounded-2xl overflow-hidden xl:h-125 xl:w-125 xl:bg-cover">
         <img
           :src="featured3"
           :alt="data.title"
@@ -15,7 +15,7 @@
         <div class="flex flex-col lg:flex-row space-y-5 justify-between uppercase py-10">
 
           <h1 class="text-5xl">{{ data.title }}</h1>
-          <div class="flex items-center w-46 lg:w-auto justify-between px-4 rounded-xl text-3xl border-2 border-solid border-amber-50">Visit Site <ArrowRight :size="35" stroke-width="1.4" class="transform rotate-[315deg]"/></div>
+          <div class="flex items-center w-46 lg:w-auto justify-between px-4 rounded-xl text-3xl border-2 border-solid border-amber-50">Visit Site <ArrowRight :size="35" stroke-width="1.4" class="transform rotate-315deg"/></div>
 
         </div>
 

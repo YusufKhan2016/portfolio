@@ -1,7 +1,7 @@
 <template>
   <section id="myWorks">
     <hr
-    class="border-1 border-solid border-amber-50"
+    class="border border-solid border-amber-50"
     ref="sectionBorder">
 
     <div class="container mx-auto">
@@ -9,7 +9,7 @@
 
         <!-- heading  -->
         <div class="flex flex-col md:flex-row items-center justify-between gap-2 py-7">
-          <h2 class="text-[#BBBBBB] md:w-[400px] text-lg md:text-2xl">
+          <h2 class="text-[#BBBBBB] md:w-100 text-lg md:text-2xl">
             "I design sleek, high-performance web experience that help brands stand out."
           </h2>
           <h1 class="flex items-center text-3xl md:text-[40px] uppercase">My Works <ArrowRight :size="45" stroke-width="1.4" /> </h1>

@@ -12,7 +12,7 @@
 
     </div>
 
-    <div class="border-t-1 border-solid border-gray-500 mx-auto uppercase flex justify-center items-center py-2 mt-3">
+    <div class="border-t border-solid border-gray-500 mx-auto uppercase flex justify-center items-center py-2 mt-3">
       <p>© 2026 Rafsun All rights reserved</p>
     </div>
   </footer>

@@ -2,9 +2,9 @@
   <header class="">
     <div
       ref="navBar"
-      class="hidden xl:block fixed translate-x-1/2 right-1/2 z-[111111] mt-1 rounded-[10px_10px_20px_20px] overflow-hidden mx-auto"
+      class="hidden xl:block fixed translate-x-1/2 right-1/2 z-111111 mt-1 rounded-[10px_10px_20px_20px] overflow-hidden mx-auto"
     >
-      <ul class="relative min-w-[1200px] px-10 py-4 flex justify-evenly text-md font-semibold bg-gray-700/40 border-b-1 border-solid gap-8">
+      <ul class="relative min-w-300 px-10 py-4 flex justify-evenly text-md font-semibold bg-gray-700/40 border-b border-solid gap-8">
         <router-link
         to="/#myWorks"
         class="cursor-pointer transition-all duration-300"
@@ -54,9 +54,8 @@
         </router-link>
 
         <router-link
-          to="admin-login"
-          class="cursor-pointer transition-all duration-300"
-          :class="activeSection === 'featuredWorks' ? 'text-amber-50 border-b-2 border-amber-50' : 'text-white hover:text-gray-300'"
+          to="/admin-login"
+          class="cursor-pointer transition-all duration-300 text-white hover:text-gray-300"
         >
           Admin
         </router-link>
