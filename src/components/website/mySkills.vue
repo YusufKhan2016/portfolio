@@ -33,7 +33,7 @@
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
-import SubHeadingText from './headings/subHeadingText.vue'
+import SubHeadingText from '@/components/website/headings/subHeadingText.vue'
 
 type skill = { sl: string, title: string, value: string }
 const skills: skill[] = [

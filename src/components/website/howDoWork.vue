@@ -29,7 +29,7 @@
 import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger, SplitText } from 'gsap/all';
-import SubHeadingText from './headings/subHeadingText.vue';
+import SubHeadingText from '@/components/website/headings/subHeadingText.vue';
 
 const paragraph = ref<HTMLElement | null>(null);
 

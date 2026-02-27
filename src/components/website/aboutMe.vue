@@ -28,7 +28,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { onMounted, ref } from 'vue';
 
-import MainHeadingText from '@/components/headings/mainHeadingText.vue';
+import MainHeadingText from '@/components/website/headings/mainHeadingText.vue';
 
 const aboutImage = ref<HTMLElement | null>(null);
 

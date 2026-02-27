@@ -33,7 +33,8 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
 import { gsap, ScrollTrigger } from 'gsap/all';
-import SubHeadingText from './headings/subHeadingText.vue';
+import SubHeadingText from '@/components/website/headings/subHeadingText.vue'
+
 
 import html from "@/assets/images/myStacks/html.svg";
 import css from "@/assets/images/myStacks/css.svg";

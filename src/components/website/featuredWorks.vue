@@ -64,7 +64,7 @@ import { ref, onMounted } from 'vue'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/all'
 
-import MainHeadingText from '@/components/headings/mainHeadingText.vue'
+import MainHeadingText from '@/components/website/headings/mainHeadingText.vue'
 
 import featured1 from '@/assets/images/featuredWorks/featured-1.webp';
 import featured2 from '@/assets/images/featuredWorks/featured-2.webp';
