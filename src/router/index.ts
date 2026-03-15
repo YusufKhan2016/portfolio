@@ -4,8 +4,9 @@ import ScrollTrigger from 'gsap/ScrollTrigger'
 
 import website from '@/router/website/website.ts';
 import login from '@/router/admin/login';
+import admin from '@/router/admin/admin';
 
-const routes = [ ...website, ...login];
+const routes = [ ...website, ...login, ...admin];
 
 const router = createRouter({
   history: createWebHistory(),
