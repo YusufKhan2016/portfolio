@@ -12,6 +12,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     AboutMe: typeof import('./src/components/website/aboutMe.vue')['default']
+    AdminMyWorks: typeof import('./src/components/admin/adminMyWorks.vue')['default']
     FeaturedWorks: typeof import('./src/components/website/featuredWorks.vue')['default']
     HeroBanner: typeof import('./src/components/website/heroBanner.vue')['default']
     HowDoWork: typeof import('./src/components/website/howDoWork.vue')['default']
@@ -38,7 +39,11 @@ declare module 'vue' {
     UDashboardSidebar: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/DashboardSidebar.vue')['default']
     UDashboardSidebarCollapse: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/DashboardSidebarCollapse.vue')['default']
     UDashboardSidebarToggle: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/DashboardSidebarToggle.vue')['default']
+    UDrawer: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Drawer.vue')['default']
     UDropdownMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/DropdownMenu.vue')['default']
+    UFileUpload: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/FileUpload.vue')['default']
+    UForm: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Form.vue')['default']
+    UFormField: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/FormField.vue')['default']
     UIcon: typeof import('./node_modules/@nuxt/ui/dist/runtime/vue/components/Icon.vue')['default']
     UInput: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/Input.vue')['default']
     UNavigationMenu: typeof import('./node_modules/@nuxt/ui/dist/runtime/components/NavigationMenu.vue')['default']

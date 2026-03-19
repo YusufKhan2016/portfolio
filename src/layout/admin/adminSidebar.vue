@@ -38,8 +38,8 @@
         :ui="{ content: '!w-(--reka-dropdown-menu-trigger-width)' }"
       >
         <UButton
-          :avatar="{ src: 'https://scontent.fdac175-1.fna.fbcdn.net/v/t39.30808-6/623425248_2419644031830154_3101286750229057805_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Z9e8Sbmgb1wQ7kNvwGf0Lf1&_nc_oc=Adm7CRBRPr_alIui8Dr3rltBV_fN2mxzcY5SVAmiyRTl94A_hBp8LC3xxsCYWo27Y0M&_nc_zt=23&_nc_ht=scontent.fdac175-1.fna&_nc_gid=5bYG9dqQNXgOnOTxcOHo1A&_nc_ss=8&oh=00_AfxSQ8O0mH7uC6slXKPjVAfQjDs4VpIlrEv8e_YRuJbqgg&oe=69B47036' }"
-          :label="collapsed ? undefined : 'Rafsun'"
+          :avatar="{ src: fileServerUrl + user.image_link }"
+          :label="collapsed ? undefined : user.name"
           color="neutral"
           variant="ghost"
           class="w-full"
@@ -60,19 +60,34 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onBeforeMount, onMounted } from 'vue';
 import type { DropdownMenuItem, NavigationMenuItem } from '@nuxt/ui'
 import { useDark } from '@vueuse/core';
 import { ChevronsUpDown } from 'lucide-vue-next';
+import { useLoginStore } from '@/stores/login';
+import { storeToRefs } from 'pinia';
+import { fileServerUrl } from '@/stores/api';
 
 const isDark = useDark()
+
+const store = useLoginStore();
+
+const {
+  getAuthUser,
+  getUserToken,
+  getGuard
+} = storeToRefs(store);
+
+const { logout } = store;
+
+const user = getAuthUser.value;
 
 const dropDownItems = computed<DropdownMenuItem[][]>(() => [
   [
     {
-      label: 'Rafsun',
+      label: user.name,
       avatar: {
-        src: 'https://scontent.fdac175-1.fna.fbcdn.net/v/t39.30808-6/623425248_2419644031830154_3101286750229057805_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=Z9e8Sbmgb1wQ7kNvwGf0Lf1&_nc_oc=Adm7CRBRPr_alIui8Dr3rltBV_fN2mxzcY5SVAmiyRTl94A_hBp8LC3xxsCYWo27Y0M&_nc_zt=23&_nc_ht=scontent.fdac175-1.fna&_nc_gid=5bYG9dqQNXgOnOTxcOHo1A&_nc_ss=8&oh=00_AfxSQ8O0mH7uC6slXKPjVAfQjDs4VpIlrEv8e_YRuJbqgg&oe=69B47036',
+        src: fileServerUrl + user.image_link,
         loading: 'lazy'
       },
       type: 'label'
@@ -111,7 +126,10 @@ const dropDownItems = computed<DropdownMenuItem[][]>(() => [
       label: 'Logout',
       icon: 'i-lucide-log-out',
       color: 'error',
-      to: '/admin-login'
+      to: '/admin-login',
+      onSelect: () => {
+        logout();
+      }
     }
   ]
 ])

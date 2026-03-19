@@ -1,4 +1,8 @@
 <template>
+  <div class="flex justify-end px-5 pt-5">
+    <AdminMyWorks />
+  </div>
+  
 <UTable
   loading
   loading-color="primary"
@@ -15,9 +19,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
-
+import { onMounted, ref } from 'vue';
 import type { TableColumn } from '@nuxt/ui'
+import AdminMyWorks from '@/components/admin/adminMyWorks.vue';
+import { useMyWorksStore } from '@/stores/sections/myWorks';
+import { storeToRefs } from 'pinia';
 
 type Payment = {
   id: string,
@@ -45,5 +51,14 @@ const columns: TableColumn<Payment>[] = [
   {accessorKey: 'email',header: 'Email',},
   {accessorKey: 'amount',header: 'Total Amount',}
 ]
+
+const store = useMyWorksStore();
+const { getWorksList, isLoading } = storeToRefs(store);
+
+const { fetchWorksList } = store;
+
+onMounted(() => {
+  fetchWorksList();
+});
 
 </script>

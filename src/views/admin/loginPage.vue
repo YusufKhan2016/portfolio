@@ -67,22 +67,27 @@ type Schema = InferType<typeof schemaValidation>;
 
 const onSubmit = async (values: FormSubmitEvent<Schema>) => {
   loading.value = true;
+
   loginRequest(values.data)
     .then((res: any) => {
+
       route.push('/dashboard');
       toast.add({
         title: 'Login Successful',
         description: 'Welcome back boss!',
         color: 'success'
       })
+
     })
     .catch((error: any) => {
+
       const message = error?.data?.message || "Something went wrong";
       toast.add({
         title: 'Login failed',
         description: message,
         color: 'error'
       })
+
     })
     .finally(() => {
       loading.value = false;

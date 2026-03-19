@@ -30,6 +30,16 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
+  const isAuth = localStorage.getItem('guard') === 'true';
+
+  if (to.path === '/admin-login' && isAuth) {
+    return next('/dashboard');
+  }
+
+  if (to.path.startsWith('/dashboard') && !isAuth) {
+    return next('/admin-login');
+  }
+
   if (!document.startViewTransition) {
     next()
     return
