@@ -22,21 +22,29 @@
 </template>
 
 <script setup lang="ts">
-import type { AuthFormField } from '@nuxt/ui'
 import { ref } from 'vue';
-import * as yup from 'yup';
-import type { InferType } from 'yup'
-import type { FormSubmitEvent } from '@nuxt/ui'
 import { useRouter } from 'vue-router';
 
+import * as yup from 'yup';
+import type { InferType } from 'yup'
+
+import type { AuthFormField } from '@nuxt/ui'
+import type { FormSubmitEvent } from '@nuxt/ui'
+import { useLoginStore } from '@/stores/login';
+
 const route = useRouter();
+
 const toast = useToast();
+const store = useLoginStore();
+
+const { loginRequest } = store;
+
 const fields = ref<AuthFormField[]>([
   {
     icon: 'i-lucide-user',
-    name: 'email',
+    name: 'username',
     type: 'text',
-    placeholder: 'Email',
+    placeholder: 'Username',
     size: 'xl',
   },
   {
@@ -51,23 +59,34 @@ const fields = ref<AuthFormField[]>([
 const loading = ref(false);
 
 const schemaValidation = yup.object({
-  email: yup.string().email().required().label("Email"),
+  username: yup.string().required().label("Username"),
   password: yup.string().required().label("Password")
 })
 
 type Schema = InferType<typeof schemaValidation>;
 
 const onSubmit = async (values: FormSubmitEvent<Schema>) => {
-  console.log('Form Submitted:', values.data)
-
-  route.push('/dashboard');
-
-  toast.add({
-    title: 'Login Successful',
-    description: 'Welcome back boss!',
-    color: 'success'
-  })
-
+  loading.value = true;
+  loginRequest(values.data)
+    .then((res: any) => {
+      route.push('/dashboard');
+      toast.add({
+        title: 'Login Successful',
+        description: 'Welcome back boss!',
+        color: 'success'
+      })
+    })
+    .catch((error: any) => {
+      const message = error?.data?.message || "Something went wrong";
+      toast.add({
+        title: 'Login failed',
+        description: message,
+        color: 'error'
+      })
+    })
+    .finally(() => {
+      loading.value = false;
+    })
 }
 
 </script>

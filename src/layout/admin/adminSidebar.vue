@@ -126,7 +126,7 @@ const items: NavigationMenuItem[][] = [
     },
     {
       label: 'My works',
-      icon: 'i-lucide-house',
+      icon: 'i-lucide-briefcase-business',
       to: "/dashboard/my-works",
       exact: true
     },
