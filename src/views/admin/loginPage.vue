@@ -28,8 +28,8 @@ import { useRouter } from 'vue-router';
 import * as yup from 'yup';
 import type { InferType } from 'yup'
 
-import type { AuthFormField } from '@nuxt/ui'
-import type { FormSubmitEvent } from '@nuxt/ui'
+import type { AuthFormField, FormSubmitEvent } from '@nuxt/ui';
+
 import { useLoginStore } from '@/stores/login';
 
 const route = useRouter();
